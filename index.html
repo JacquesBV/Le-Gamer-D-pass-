@@ -175,6 +175,10 @@
     .wt-list li { margin:9px 0; }
     .wt-list li strong { color:var(--cyan); }
     .wt-list li.wt-opt::marker { color:var(--orange); }
+    .wt-steps { padding-left:20px!important; margin:6px 0 4px; }
+    .wt-steps li { margin:5px 0; }
+    .wt-gold { margin:6px 0 4px; padding:8px 11px; border-left:3px solid var(--orange); background:rgba(255,155,98,.08); border-radius:6px; color:#e8cdb9; font-size:13px; }
+    .wt-gold b { color:var(--orange); }
     @media (max-width:900px) {
       .hero-grid { grid-template-columns:1fr; }
       .hero-art { min-height:300px; }
@@ -361,7 +365,7 @@
     // Soluce complète de Red Dead Redemption 2 (format : [nom, texte, optionnelle?])
     const rdr2Walkthrough = {
       tips:[
-        "Spoilers : cette soluce raconte le déroulement de l’histoire, du début à la fin.",
+        "Le chapitre 1 est détaillé pas à pas avec les objectifs de médaille d’or ; les autres chapitres sont encore au stade de résumé et seront détaillés ensuite. Spoilers : cette soluce raconte le déroulement de l’histoire, du début à la fin.",
         "Les missions marquées ★ sont des missions d’honneur facultatives : elles se ratent si tu avances trop loin dans l’histoire, et il les faut toutes pour le succès « Lending a Hand ».",
         "Chaque mission peut être rejouée depuis Pause > Progression > Histoire. Pour la médaille d’or, tous les objectifs doivent être remplis dans une seule partie de la mission (70 médailles d’or débloquent « Gold Rush »).",
         "Ton niveau d’honneur influence la dernière scène d’Arthur : aide les inconnus, épargne les innocents et évite de piller les gens sans défense.",
@@ -369,13 +373,49 @@
         "Sur PC, si le jeu plante, essaie de passer de DirectX 12 à Vulkan (ou inversement) dans les options graphiques."
       ],
       chapters:[
-        ["Chapitre 1 — Colter","Le gang, affamé, survit dans les montagnes enneigées.",[
-          ["Outlaws from the West","Dutch, Micah et toi fouillez une ville minière abandonnée pour trouver de quoi manger. Prise en main du déplacement dans la neige et de la fouille."],
-          ["Enter, Pursued by a Memory","Avec Javier, tu pars à la recherche de John, disparu dans la tempête. Suis les traces et ne t’éloigne pas trop de ton cheval."],
-          ["The Aftermath of Genesis","Chasse avec Charles pour ravitailler le camp. C’est le tutoriel de la chasse : vise la tête ou le cœur pour une viande de meilleure qualité."],
-          ["Old Friends","Assaut du camp des O’Driscoll. Avance de couvert en couvert ; un prisonnier, Kieran, sera capturé et servira plus tard."],
-          ["Who the Hell is Leviticus Cornwall?","Braquage du train privé de Cornwall avec les plans et explosifs volés. Neutralise les gardes avant de piller les wagons."],
-          ["Eastward Bound","Le gang quitte les montagnes pour s’installer à Horseshoe Overlook. Tu découvres la vie de camp."]
+        ["Chapitre 1 — Colter","Le gang, affamé, survit dans les montagnes enneigées. Ce chapitre est détaillé pas à pas, avec les objectifs de médaille d’or.",[
+          ["Outlaws from the West","Dutch, Micah et toi cherchez des vivres dans les montagnes.",0,[
+            "Suis Dutch à cheval dans la neige. Tu peux galoper pour garder le rythme, mais ne vide pas l’endurance de ta monture.",
+            "Micah vous rejoint et vous guide vers une ferme isolée, le ranch Adler.",
+            "Attache les chevaux aux poteaux devant la ferme, puis cache-toi dans le hangar à gauche, comme le demande Dutch.",
+            "Mets-toi à couvert et garde un œil sur la position de Micah. Avant que la fusillade ne commence, aligne un tir à la tête sur l’ennemi à la fenêtre du haut.",
+            "Élimine les occupants en sortant de couvert par intermittence, puis fouille la maison de fond en comble."
+          ],["Aucun dégât pendant la fusillade","Fouiller au moins 6 objets au ranch Adler (tiroirs, placards : ne sors pas avant)","Au moins 80 % de précision"]],
+          ["Enter, Pursued by a Memory","Abigail s’inquiète : John n’est pas rentré. Tu pars avec Javier.",0,[
+            "Suis Javier à cheval jusqu’à un camp abandonné où il repère la piste de John.",
+            "Continue à suivre Javier en montant la montagne et en contournant le ravin, jusqu’à la carcasse du cheval de John.",
+            "Javier tire en l’air et John répond au loin. Poursuis à pied : le jeu t’apprend à t’accroupir, à grimper et à surveiller ton endurance.",
+            "Tu trouves John blessé sur une corniche. Prends-le et amène-le à Javier.",
+            "Des loups attaquent : abats-les pour protéger Javier et John jusqu’aux chevaux.",
+            "Redescends à cheval. D’autres loups surgissent de tous les côtés : tue-les avant qu’ils n’atteignent Javier, puis suis-le le long de la rivière jusqu’au camp."
+          ],["Tuer tous les loups sans subir de dégâts (aucune morsure)","Au moins 80 % de précision"]],
+          ["The Aftermath of Genesis","Pearson n’a presque plus rien à cuisiner. Charles t’apprend à chasser à l’arc.",0,[
+            "Après la discussion au camp, Charles se propose et te prête son arc. Suis-le au sud du camp jusqu’à une piste dans la neige, puis descends de cheval.",
+            "Active l’Œil de lynx pour suivre les traces. Reste accroupi, avance lentement et fais attention au vent pour ne pas effrayer l’animal.",
+            "Tire sur le premier cerf à la tête ou au cou. Charles te dit d’en trouver un autre : refais la même chose avec le second.",
+            "Charles s’occupe d’une carcasse, toi de l’autre : siffle ton cheval, place-la sur sa croupe et retrouve Charles.",
+            "Sur le chemin du retour, un grizzly bloque la route : laisse-le passer, il n’y a rien à gagner à l’affronter."
+          ],["Tuer chaque cerf avec une seule flèche","Ne pas effrayer les cerfs","Réussir un kill propre sur le second cerf"]],
+          ["Old Friends","Dutch veut frapper les O’Driscoll avant qu’ils ne frappent le gang.",0,[
+            "Dutch décide d’attaquer le camp des O’Driscoll. Hosea, Charles et Pearson gardent le camp. Suis Dutch jusqu’à un lac au sud-ouest.",
+            "Le camp ennemi compte plusieurs hommes. Vise la tête et utilise le Dead Eye ; sors de ce mode dès que tes cibles sont marquées pour économiser la jauge.",
+            "Au retour, un homme s’enfuit à cheval : c’est Kieran. Poursuis-le, sors le lasso depuis la roue des armes et ligote-le. Le plus rapide : abattre son cheval.",
+            "Place Kieran sur ton cheval, rentre au camp et dépose-le dans la cabane indiquée pour lancer la scène de fin."
+          ],["Capturer et ligoter Kieran en 45 secondes","Tuer 3 O’Driscoll dans un même Dead Eye","Terminer en 15 min 30 s maximum","Faire 15 headshots","N’utiliser aucun objet de soin"]],
+          ["Who the Hell is Leviticus Cornwall?","Premier braquage de train, celui du magnat Cornwall.",0,[
+            "Le plan est prêt, Hosea n’aime pas l’idée de s’attaquer à Cornwall. Rejoins la voie ferrée avec le gang.",
+            "La dynamite de Bill ne fonctionne pas : suis Javier et Lenny et saute sur le toit du train qui passe, au bord du tunnel.",
+            "Javier tombe et Lenny reste suspendu sur le côté. Aide Lenny à remonter en martelant la touche indiquée, vite.",
+            "Avance vers l’avant du train. Tu peux laisser Lenny prendre la tête et éliminer un garde en silence, ou y aller toi-même. Si le mécanicien attrape Lenny, abats l’ennemi d’une balle dans la tête avant qu’il le jette.",
+            "Atteins la locomotive et actionne le levier pour arrêter le train. Élimine ensuite rapidement les gardes restants depuis les couverts, sans oublier ceux sur le toit.",
+            "Fouille les wagons ; Dutch te demande de faire sauter la porte du wagon privé de Cornwall. Pense à regarder sur le bureau.",
+            "Dutch te confie le sort des hommes restants et du train : tu peux les abattre ou les faire monter dans le train. Va ensuite à la locomotive, relance le train, saute et rappelle ton cheval."
+          ],["Sauver Lenny quand il est suspendu","Éliminer les gardes en 1 min 30 après l’arrêt du train","Aucun dégât pendant la fusillade","10 headshots (environ 7 sur le train, le reste après l’arrêt)","N’utiliser aucun objet de soin"]],
+          ["Eastward Bound","Le gang quitte les montagnes pour la vallée.",0,[
+            "Tu conduis un chariot qui perd une roue après avoir franchi une rivière : répare-la le plus vite possible.",
+            "Suis la route vers le point de passage en poussant les chevaux.",
+            "Près du camp, Javier t’appelle : prends-le sur ton chariot avant d’arriver à Horseshoe Overlook, puis installe-toi."
+          ],["Terminer en moins de 6 minutes","Prendre Javier en entrant à Horseshoe Overlook"]]
         ]],
         ["Chapitre 2 — Horseshoe Overlook","Camp dans les plaines près de Valentine. Beaucoup de missions deviennent disponibles en même temps.",[
           ["Polite Society, Valentine Style","Sortie à Valentine avec Uncle et les filles. Mission tranquille, surtout des dialogues."],
@@ -655,7 +695,7 @@
         document.getElementById("modalContent").innerHTML =
           '<p>' + esc(game.intro) + '</p><h3>Avant de commencer</h3><ul>' + w.tips.map(t => "<li>" + esc(t) + "</li>").join("") + '</ul>' +
           w.chapters.map((c, i) => '<details class="wt-chapter"' + (i === 0 ? ' open' : '') + '><summary>' + esc(c[0]) + ' <small>' + c[2].length + ' missions</small></summary><p class="wt-intro">' + esc(c[1]) + '</p><ol class="wt-list">' +
-            c[2].map(m => '<li' + (m[2] ? ' class="wt-opt"' : '') + '><strong>' + esc(m[0]) + '</strong> ' + esc(m[1]) + '</li>').join("") + '</ol></details>').join("");
+            c[2].map(m => '<li' + (m[2] ? ' class="wt-opt"' : '') + '><strong>' + esc(m[0]) + '</strong> ' + esc(m[1]) + (m[3] ? '<ol class="wt-steps">' + m[3].map(x => '<li>' + esc(x) + '</li>').join('') + '</ol>' : '') + (m[4] ? '<div class="wt-gold"><b>Médaille d’or :</b> ' + m[4].map(esc).join(' · ') + '</div>' : '') + '</li>').join("") + '</ol></details>').join("");
         document.getElementById("guideModal").classList.add("open");
         document.body.style.overflow = "hidden";
         document.getElementById("closeModal").focus();
