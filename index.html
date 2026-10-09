@@ -167,6 +167,14 @@
     .modal-content ol { padding-left:21px; }
     .modal-shot { min-height:175px; margin:15px 0; display:grid; place-items:center; text-align:center; border:1px dashed rgba(86,224,210,.4); border-radius:12px; color:#aab7c8; background:radial-gradient(ellipse at 65% 40%,rgba(86,224,210,.15),transparent 35%),#0c1320; padding:16px; }
     .modal-shot strong { display:block; color:var(--cyan); margin-bottom:4px; }
+    .wt-chapter { border:1px solid var(--line); border-radius:12px; margin:10px 0; background:#0c1320; }
+    .wt-chapter summary { cursor:pointer; padding:13px 15px; font-weight:850; color:var(--text); }
+    .wt-chapter summary small { color:var(--muted); font-weight:600; margin-left:6px; }
+    .wt-intro { margin:0; padding:0 15px 6px; color:var(--muted)!important; font-size:13px!important; }
+    .wt-list { margin:0; padding:4px 15px 14px 38px!important; }
+    .wt-list li { margin:9px 0; }
+    .wt-list li strong { color:var(--cyan); }
+    .wt-list li.wt-opt::marker { color:var(--orange); }
     @media (max-width:900px) {
       .hero-grid { grid-template-columns:1fr; }
       .hero-art { min-height:300px; }
@@ -350,6 +358,146 @@
       (par exemple screenshots/mon-jeu-01.jpg), puis indique son chemin dans "image".
       Les titres, textes, catégories et captures sont modifiables ici.
     */
+    // Soluce complète de Red Dead Redemption 2 (format : [nom, texte, optionnelle?])
+    const rdr2Walkthrough = {
+      tips:[
+        "Spoilers : cette soluce raconte le déroulement de l’histoire, du début à la fin.",
+        "Les missions marquées ★ sont des missions d’honneur facultatives : elles se ratent si tu avances trop loin dans l’histoire, et il les faut toutes pour le succès « Lending a Hand ».",
+        "Chaque mission peut être rejouée depuis Pause > Progression > Histoire. Pour la médaille d’or, tous les objectifs doivent être remplis dans une seule partie de la mission (70 médailles d’or débloquent « Gold Rush »).",
+        "Ton niveau d’honneur influence la dernière scène d’Arthur : aide les inconnus, épargne les innocents et évite de piller les gens sans défense.",
+        "Avant la mission « Red Dead Redemption » (fin du chapitre 6), termine tes activités avec Arthur et crée un second emplacement de sauvegarde : ensuite, tu incarnes John.",
+        "Sur PC, si le jeu plante, essaie de passer de DirectX 12 à Vulkan (ou inversement) dans les options graphiques."
+      ],
+      chapters:[
+        ["Chapitre 1 — Colter","Le gang, affamé, survit dans les montagnes enneigées.",[
+          ["Outlaws from the West","Dutch, Micah et toi fouillez une ville minière abandonnée pour trouver de quoi manger. Prise en main du déplacement dans la neige et de la fouille."],
+          ["Enter, Pursued by a Memory","Avec Javier, tu pars à la recherche de John, disparu dans la tempête. Suis les traces et ne t’éloigne pas trop de ton cheval."],
+          ["The Aftermath of Genesis","Chasse avec Charles pour ravitailler le camp. C’est le tutoriel de la chasse : vise la tête ou le cœur pour une viande de meilleure qualité."],
+          ["Old Friends","Assaut du camp des O’Driscoll. Avance de couvert en couvert ; un prisonnier, Kieran, sera capturé et servira plus tard."],
+          ["Who the Hell is Leviticus Cornwall?","Braquage du train privé de Cornwall avec les plans et explosifs volés. Neutralise les gardes avant de piller les wagons."],
+          ["Eastward Bound","Le gang quitte les montagnes pour s’installer à Horseshoe Overlook. Tu découvres la vie de camp."]
+        ]],
+        ["Chapitre 2 — Horseshoe Overlook","Camp dans les plaines près de Valentine. Beaucoup de missions deviennent disponibles en même temps.",[
+          ["Polite Society, Valentine Style","Sortie à Valentine avec Uncle et les filles. Mission tranquille, surtout des dialogues."],
+          ["Americans at Rest","Dans un saloon de Valentine, tu charmes les clients avec Javier et Charles jusqu’à ce que Bill déclenche une bagarre générale."],
+          ["Who is Not without Sin","Arthur va voir ce que fait le révérend Swanson à Flatneck Station. Mission surtout narrative."],
+          ["Exit Pursued by a Bruised Ego","Chasse à l’ours avec Hosea près de la Dakota. Utilise l’Œil de lynx pour suivre les traces et vise la tête."],
+          ["The First Shall Be Last","Avec Trelawny, Javier et Charles, tu suis des chasseurs de primes pour libérer Sean. Combat en couverture."],
+          ["Paying a Social Call","Kieran vous guide vers Six Point Cabin où se cacherait Colm O’Driscoll. Fusillade en perspective."],
+          ["A Quiet Time","Tu emmènes Lenny boire un verre à Valentine pour le calmer. Séquence d’ivresse, puis retour au camp."],
+          ["Blessed are the Meek?","Évasion de Micah de la prison de Strawberry avant sa pendaison. Prévois une fuite à cheval."],
+          ["Good, Honest, Snake Oil","★ Capture le vendeur de remèdes recherché Benedict Allbright près de la Dakota.",1],
+          ["We Loved Once and True (I-III)","★ Mary Linton te demande de convaincre Jamie, retrouvé dans l’ordre des Chéloniens, de revenir.",1],
+          ["Money Lending and Other Sins (I-II)","★ Strauss te charge de récupérer l’argent de plusieurs débiteurs.",1],
+          ["Money Lending and Other Sins (III)","Tu retrouves Thomas Downes, ruiné et malade : à toi de décider jusqu’où insister."],
+          ["The Spines of America","Avec Hosea et Seamus, tu attaques une diligence à Carmody Dell pour convaincre le receleur d’Emerald Ranch."],
+          ["Pouring Forth Oil (I-II)","★ Vole un wagon d’huile pour préparer le braquage de train de John.",1],
+          ["A Fisher of Men","Sortie pêche avec Jack : tu apprends les bases de la pêche."],
+          ["Pouring Forth Oil (III-IV)","Le wagon bloque la voie : tu braques le train, les passagers et le wagon à bagages."],
+          ["An American Pastoral Scene","Avec Micah, tu attaques une diligence qui transporte l’argent d’une banque."],
+          ["The Sheep and the Goats","Vol d’un troupeau de moutons à vendre aux enchères à Valentine. Garde le troupeau groupé."],
+          ["A Strange Kindness","Avec Charles, tu repères un nouveau campement à Dewbury Creek. Fin du chapitre."]
+        ]],
+        ["Chapitre 3 — Clemens Point","Nouveau camp près de Rhodes, au milieu d’une guerre entre deux familles.",[
+          ["The New South","Pêche avec Dutch et Hosea, puis installation à Clemens Point."],
+          ["Further Questions of Female Suffrage","Tu accompagnes Sadie à Rhodes pour acheter des provisions."],
+          ["Money Lending and Other Sins (IV)","★ Strauss te donne d’autres débiteurs à relancer.",1],
+          ["American Distillation","Tu aides un shérif adjoint à détruire une distillerie clandestine et à voler la cargaison de moonshine."],
+          ["The Course of True Love (I-II)","★ Livre la lettre de Beau Gray à Penelope Braithwaite.",1],
+          ["The Course of True Love (III)","★ Conduis Penelope et d’autres manifestantes lors d’un rassemblement à Rhodes.",1],
+          ["Advertising, the New American Art (I-II)","Tu distribues l’alcool volé dans un saloon de Rhodes avec Hosea. Une bagarre est quasi garantie."],
+          ["Horse Flesh for Dinner","Vol de chevaux de valeur au manoir Braithwaite avec John et Javier."],
+          ["The Fine Joys of Tobacco","Avec Sean, tu aides à incendier les champs de tabac des Gray à Caliga Hall."],
+          ["Magicians for Sport","Avec Charles, tu retrouves Trelawny dans sa caravane à Rhodes."],
+          ["Friends in Very Low Places","Trelawny fait diversion pendant que tu attaques une diligence."],
+          ["An Honest Mistake","Embuscade d’un convoi de paie avec Uncle, Charles et Bill."],
+          ["Preaching Forgiveness As He Went","Avec Lenny, tu cherches un stock d’armes des Lemoyne Raiders près de Shady Belle."],
+          ["Sodom? Back to Gomorrah","Braquage de la banque de Valentine : Karen fait diversion, tu t’occupes des coffres."],
+          ["Blessed are the Peacemakers","Tu surveilles de loin la rencontre entre Dutch et Colm. Prépare-toi, le piège est probable."],
+          ["A Short Walk in a Pretty Town","Rendez-vous avec les Gray à Rhodes pour un travail de sécurité. La situation dégénère."],
+          ["Blood Feuds, Ancient and Modern","Assaut du manoir Braithwaite pour récupérer Jack."],
+          ["The Battle of Shady Belle","Avec John, tu élimines les derniers Raiders avant de déplacer le camp."]
+        ]],
+        ["Chapitre 4 — Shady Belle","Le gang s’installe près de Saint Denis, dans les marais.",[
+          ["The Joys of Civilization","Arrivée à Saint Denis : tu interroges des clients du saloon sur Angelo Bronte."],
+          ["Angelo Bronte, a Man of Honor","Bronte accepte de t’aider pour Jack si le gang nettoie un cimetière. Prépare des munitions."],
+          ["Money Lending and Other Sins (V)","★ Récupère la dette d’Algie Davison.",1],
+          ["Help a Brother Out","★ Frère Dorkins te demande d’enquêter sur un magasin suspect.",1],
+          ["Brothers and Sisters, One and All","★ Rattrape l’enfant des rues qui a volé le crucifix de Sœur Calderón.",1],
+          ["Fatherhood and Other Dreams (I-II)","★ Mary veut que tu retrouves un bijou de famille vendu par son père joueur.",1],
+          ["No, No and Thrice, No","Avec Susan, tu sauves Tilly, kidnappée par les frères Foreman."],
+          ["The Gilded Cage","Soirée mondaine chez le maire de Saint Denis : discussions et repérage de nouveaux coups."],
+          ["American Fathers (I-II)","Avec Eagle Flies, tu t’introduis dans Cornwall Kerosene and Tar pour voler un rapport sur le pétrole de la réserve."],
+          ["A Fine Night of Debauchery","Tournoi de cartes sur le Grand Korrigan, truqué avec l’aide de Strauss et Trelawny."],
+          ["High and Low Finance","Mission réservée à l’édition spéciale : braquage de la banque de Rhodes à la dynamite."],
+          ["Horsemen, Apocalypses","Les O’Driscoll attaquent le camp après avoir renvoyé le corps de Kieran. Défends le camp avec Sadie."],
+          ["Urban Pleasures","Tu braques un tramway sur un tuyau de Bronte : c’était un piège."],
+          ["Country Pursuits","Tu prépares l’assaut contre Bronte en te procurant une barque."],
+          ["Revenge is a Dish Best Eaten","Assaut du manoir de Bronte depuis le fleuve."],
+          ["Banking, the Old American Art","Dernier gros coup : la banque de Saint Denis. Le braquage tourne mal et le chapitre se termine."]
+        ]],
+        ["Chapitre 5 — Guarma","Naufragé sur une île, Arthur tente de retrouver ses compagnons.",[
+          ["Welcome to the New World","Échoué sur l’île, tu cherches le reste du gang."],
+          ["Savagery Unleashed","Pour obtenir un passage de retour, tu libères des ouvriers locaux."],
+          ["A Kind and Benevolent Despot","Avec Dutch et Gloria, tu t’infiltres chez Fussar pour libérer Javier."],
+          ["Hell Hath No Fury","À Cinco Torres, vous dégagez les eaux autour de l’île."],
+          ["Paradise Mercifully Departed","Tu détruis les batteries côtières et sauves le capitaine pour pouvoir partir."],
+          ["Dear Uncle Tacitus","De retour en Amérique, tu retournes à Shady Belle chercher les autres."],
+          ["Fleeting Joy","Retrouvailles à Lakay, vite interrompues par une attaque des Pinkertons."],
+          ["A Fork in the Road","Arthur s’effondre à Saint Denis et se réveille chez un médecin."],
+          ["That’s Murfree Country","Avec Charles, tu cherches un nouveau camp à Beaver Hollow."]
+        ]],
+        ["Chapitre 6 — Beaver Hollow","Le gang est divisé. Dernier chapitre avec Arthur : tout est à finir avant la dernière mission.",[
+          ["Icarus and Friends","En montgolfière, tu repères la prison de Sisika pour Sadie."],
+          ["Visiting Hours","Avec Sadie, tu rames jusqu’à Sisika Island pour libérer John."],
+          ["Just a Social Call","À Annesburg avec Dutch et Micah, tu t’apprêtes à confronter Cornwall."],
+          ["Do Not Seek Absolution (I)","★ Aide Archie Downes à la mine d’Annesburg.",1],
+          ["Do Not Seek Absolution (II)","★ Retrouve la mère d’Archie à Willard’s Rest.",1],
+          ["Of Men and Angels","★ Donne de la nourriture ou un peu d’argent aux pauvres de Saint Denis.",1],
+          ["The Course of True Love (IV-V)","★ Aide Penelope et Beau à fuir leurs familles.",1],
+          ["Money Lending and Other Sins (VI-VII)","★ Dernières dettes à récupérer pour Strauss.",1],
+          ["The Delights of Van Horn","Embuscade d’un convoi militaire transportant de la dynamite avec Bill."],
+          ["The Bridge to Nowhere","Avec John, tu fais sauter le pont Bacchus pour perturber l’armée."],
+          ["A Rage Unleashed","Raid sur un bateau de l’armée pour récupérer les chevaux de la réserve de Wapiti."],
+          ["Archeology for Beginners","★ Rains Fall t’emmène sur un site sacré dans les Grizzlies de l’Est.",1],
+          ["Honor, Amongst Thieves","★ Vole un vaccin détourné par l’armée pour le capitaine Monroe.",1],
+          ["The Fine Art of Conversation","Tu assistes à une réunion de trêve entre le colonel Favours et Rains Fall."],
+          ["Goodbye, Dear Friend","À Saint Denis, tu assistes à la pendaison de Colm O’Driscoll avec Sadie et Dutch."],
+          ["Mrs. Sadie Adler, Widow (I-II)","★ Avec Sadie, tu règles définitivement le compte des O’Driscoll à Hanging Dog Ranch.",1],
+          ["Favored Sons","Eagle Flies tend une embuscade à une patrouille pour détourner l’attention."],
+          ["The King’s Son","Avec Charles, tu t’infiltres à Fort Wallace pour libérer Eagle Flies."],
+          ["My Last Boy","Dernier assaut contre Cornwall Kerosene and Tar aux côtés d’Eagle Flies."],
+          ["Our Best Selves","Dernier gros coup : intercepter un train de l’armée près de Saint Denis."],
+          ["Red Dead Redemption","Avec Sadie, tu pars secourir Abigail à Van Horn. Tu feras un choix décisif vers la fin : retourner aider John plutôt que partir avec l’argent est ce qui donne à l’histoire sa conclusion la plus forte. Fais une sauvegarde avant."]
+        ]],
+        ["Épilogue, partie 1 — Pronghorn Ranch","Des années plus tard, tu joues John Marston. Blackwater et le Nouveau-Austin sont accessibles.",[
+          ["The Wheel","John, Abigail et Jack cherchent du travail à Strawberry."],
+          ["Simple Pleasures","John se fait engager à Pronghorn Ranch sous un faux nom."],
+          ["Farming, for Beginners","Journée de travail : clôture et bétail."],
+          ["Fatherhood, for Beginners","John accepte plus de tâches à la ferme pendant que les autres sont occupés."],
+          ["Old Habits","Des hommes de main sèment la pagaille au ranch."],
+          ["Jim Milton Rides, Again?","Après les remerciements de Geddes, un raid nocturne surprend le ranch."],
+          ["Fatherhood, for Idiots","Tu emmènes Jack à Strawberry chercher du courrier et un colis."],
+          ["Motherhood","John reçoit un télégramme de Sadie."],
+          ["Gainful Employment","Tu rejoins Sadie à Valentine pour une chasse à la prime."],
+          ["The Landowning Classes / Home of the Gentry?","Avant d’acheter Beecher’s Hope, tu inspectes les terres et chasses les squatteurs."]
+        ]],
+        ["Épilogue, partie 2 — Beecher’s Hope","John construit sa vie de fermier. Ta cible finale : Micah.",[
+          ["Bare Knuckle Friendships","Avec Uncle, tu pars à Saint Denis pour retrouver Charles."],
+          ["Home Improvement for Beginners","Tu démolis la cabane en ruine avec Uncle et Charles."],
+          ["An Honest Day’s Labors","À Blackwater, tu aides Sadie à récupérer un criminel recherché."],
+          ["The Tool Box","Tu achètes une maison préfabriquée et la fais livrer en évitant les frères Skinner."],
+          ["A New Jerusalem","Montage de la maison avec Charles et Uncle."],
+          ["A Quick Favor for an Old Friend","Chasse à la prime avec Sadie pour rembourser tes dettes."],
+          ["Uncle’s Bad Day","Uncle est enlevé par les Skinner après la fête de la grange."],
+          ["Trying Again","Pêche avec Jack et le chien Rufus."],
+          ["A Really Big Bastard","Tu pars avec Sadie traquer un criminel dans Tall Trees."],
+          ["A New Future Imagined","Sortie à Blackwater avec Abigail pour une question importante."],
+          ["American Venom","Avec Sadie et Charles, tu interroges Cleet à Strawberry pour retrouver Micah : le duel final."]
+        ]]
+      ]
+    };
+
     const categories = [
       { id:"action-aventure", label:"Action-aventure", icon:"⚔️", hint:"Exploration & missions" },
       { id:"rpg", label:"RPG", icon:"🧙", hint:"Quêtes & personnages" },
@@ -367,8 +515,8 @@
         title:"Red Dead Redemption 2", category:"action-aventure",
         description:"Missions, activités, objets rares et secrets du Far West.",
         image:"screenshots/red-dead-redemption-2-01.jpg", imageAlt:"Capture de Red Dead Redemption 2",
-        updated:"Guide à compléter", guides:["Solution de l’histoire","Légendaires et objets rares","Défis et activités"],
-        intro:"Retrouve ici les étapes principales de l’aventure d’Arthur Morgan, les missions secondaires et les découvertes cachées.",
+        updated:"Soluce complète", walkthrough:rdr2Walkthrough, guides:["Histoire : 8 chapitres, 110 missions","Missions d’honneur facultatives","Conseils & médailles d’or"],
+        intro:"Toute l’histoire d’Arthur Morgan et John Marston, mission par mission, du chapitre 1 à l’épilogue. Attention : spoilers.",
         steps:["Choisis le chapitre ou la mission à consulter dans la table des matières de ta future soluce.","Suis les objectifs dans l’ordre et vérifie les captures d’écran aux passages importants.","Pense à indiquer les choix qui peuvent modifier la suite de l’histoire."]
       },
       {
@@ -502,6 +650,17 @@
       const game = games[index];
       document.getElementById("modalTitle").textContent = game.title;
       document.getElementById("modalSubtitle").textContent = categoryName(game.category) + " • PC • Soluce en français";
+      if (game.walkthrough) {
+        const w = game.walkthrough;
+        document.getElementById("modalContent").innerHTML =
+          '<p>' + esc(game.intro) + '</p><h3>Avant de commencer</h3><ul>' + w.tips.map(t => "<li>" + esc(t) + "</li>").join("") + '</ul>' +
+          w.chapters.map((c, i) => '<details class="wt-chapter"' + (i === 0 ? ' open' : '') + '><summary>' + esc(c[0]) + ' <small>' + c[2].length + ' missions</small></summary><p class="wt-intro">' + esc(c[1]) + '</p><ol class="wt-list">' +
+            c[2].map(m => '<li' + (m[2] ? ' class="wt-opt"' : '') + '><strong>' + esc(m[0]) + '</strong> ' + esc(m[1]) + '</li>').join("") + '</ol></details>').join("");
+        document.getElementById("guideModal").classList.add("open");
+        document.body.style.overflow = "hidden";
+        document.getElementById("closeModal").focus();
+        return;
+      }
       document.getElementById("modalContent").innerHTML =
         '<p>' + esc(game.intro) + '</p><div class="modal-shot"><span><strong>Capture d’écran du guide</strong>Ajoute une image dans le dossier screenshots puis relie-la à cette section.</span></div>' +
         '<h3>Rubriques de la soluce</h3><ul>' + game.guides.map(g => "<li>" + esc(g) + "</li>").join("") + '</ul>' +
