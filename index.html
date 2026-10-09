@@ -365,7 +365,7 @@
     // Soluce complète de Red Dead Redemption 2 (format : [nom, texte, optionnelle?])
     const rdr2Walkthrough = {
       tips:[
-        "Le chapitre 1 est détaillé pas à pas. Dans le chapitre 2, la soluce reprend à A Quiet Time et poursuit les missions dans l’ordre de la liste. Spoilers : cette soluce raconte le déroulement de l’histoire, du début à la fin.",
+        "Le chapitre 1 est détaillé pas à pas. La soluce reprend au chapitre 2 à A Quiet Time et détaille ensuite les missions du chapitre 3. Spoilers : cette soluce raconte le déroulement de l’histoire, du début à la fin.",
         "Les missions marquées ★ sont des missions d’honneur facultatives : elles se ratent si tu avances trop loin dans l’histoire, et il les faut toutes pour le succès « Lending a Hand ».",
         "Chaque mission peut être rejouée depuis Pause > Progression > Histoire. Pour la médaille d’or, tous les objectifs doivent être remplis dans une seule partie de la mission (70 médailles d’or débloquent « Gold Rush »).",
         "Ton niveau d’honneur influence la dernière scène d’Arthur : aide les inconnus, épargne les innocents et évite de piller les gens sans défense.",
@@ -499,24 +499,111 @@
           ],["Ramener le prisonnier à sa famille en moins de 1 min 40","5 tirs en pleine tête","Au moins 80 % de précision","Ne pas utiliser d’objet de soin"]]
         ]],
         ["Chapitre 3 — Clemens Point","Nouveau camp près de Rhodes, au milieu d’une guerre entre deux familles.",[
-          ["The New South","Pêche avec Dutch et Hosea, puis installation à Clemens Point.",0,0,["Assommer Anders Anderson sans prendre un coup", "Le rattraper et le ramener en prison en 5 min 30", "Attraper un poisson avec Dutch et Hosea"]],
-          ["Further Questions of Female Suffrage","Tu accompagnes Sadie à Rhodes pour acheter des provisions.",0,0,["Repousser les Lemoyne Raiders en moins d’une minute", "5 headshots", "Au moins 85 % de précision", "N’utiliser aucun objet de soin"]],
-          ["Money Lending and Other Sins (IV)","★ Strauss te donne d’autres débiteurs à relancer.",1],
-          ["American Distillation","Tu aides un shérif adjoint à détruire une distillerie clandestine et à voler la cargaison de moonshine.",0,0,["Gagner la course jusqu’au camp", "Ne subir aucun dégât", "10 headshots", "Au moins 70 % de précision"]],
-          ["The Course of True Love (I-II)","★ Livre la lettre de Beau Gray à Penelope Braithwaite.",1,0,["Atteindre Penelope sans te faire repérer", "Terminer en 3 minutes"]],
-          ["The Course of True Love (III)","★ Conduis Penelope et d’autres manifestantes lors d’un rassemblement à Rhodes.",1,0,["Terminer en 4 min 15"]],
-          ["Advertising, the New American Art (I-II)","Tu distribues l’alcool volé dans un saloon de Rhodes avec Hosea. Une bagarre est quasi garantie.",0,0,["Headshot 5 Raiders dans le saloon", "Au moins 90 % de précision", "N’utiliser aucun objet de soin"]],
-          ["Horse Flesh for Dinner","Vol de chevaux de valeur au manoir Braithwaite avec John et Javier.",0,0,["Tuer le palefrenier qui te montre les chevaux", "Attraper l’étalon en 10 secondes", "5 headshots"]],
-          ["The Fine Joys of Tobacco","Avec Sean, tu aides à incendier les champs de tabac des Gray à Caliga Hall.",0,0,["Tuer en silence le Gray que Sean distrait dans le magasin de chariots", "Arroser les champs en 2 min 20", "Tuer 5 Gray pendant la fuite", "N’utiliser aucun objet de soin"]],
-          ["Magicians for Sport","Avec Charles, tu retrouves Trelawny dans sa caravane à Rhodes.",0,0,["Inspecter tous les indices de la caravane de Trelawny", "Rester près de la piste de Trelawny pendant le pistage", "Tuer 2 chasseurs de primes dans les champs de maïs en 1 minute", "N’utiliser aucun objet de soin"]],
-          ["Friends in Very Low Places","Trelawny fait diversion pendant que tu attaques une diligence.",0,0,["Ne pas te faire repérer", "Terminer en 8 min 10"]],
-          ["An Honest Mistake","Embuscade d’un convoi de paie avec Uncle, Charles et Bill.",0,0,["Sauver Uncle quand il est submergé", "20 headshots", "Au moins 80 % de précision", "N’utiliser aucun objet de soin"]],
-          ["Preaching Forgiveness As He Went","Avec Lenny, tu cherches un stock d’armes des Lemoyne Raiders près de Shady Belle.",0,0,["Tuer 10 Raiders avec un fusil à lunette", "Terminer en 11 min 30", "Au moins 70 % de précision", "N’utiliser aucun objet de soin"]],
-          ["Sodom? Back to Gomorrah","Braquage de la banque de Valentine : Karen fait diversion, tu t’occupes des coffres.",0,0,["Piller tous les coffres", "Headshot 5 agents à cheval pendant la fuite", "Arriver à Downes Ranch en 1 min 55", "Au moins 70 % de précision", "N’utiliser aucun objet de soin"]],
-          ["Blessed are the Peacemakers","Tu surveilles de loin la rencontre entre Dutch et Colm. Prépare-toi, le piège est probable.",0,0,["Te libérer et te recoudre en 1 minute", "Récupérer tes armes dans le camp des O’Driscoll", "Tuer les O’Driscoll qui t’ont frappé et tiré dessus", "Quitter le camp sans te faire repérer"]],
-          ["A Short Walk in a Pretty Town","Rendez-vous avec les Gray à Rhodes pour un travail de sécurité. La situation dégénère.",0,0,["Tuer 3 agents en Dead Eye pendant que tu sauves Bill", "N’utiliser que des armes de poing", "Terminer en 4 min 30", "20 headshots", "N’utiliser aucun objet de soin"]],
-          ["Blood Feuds, Ancient and Modern","Assaut du manoir Braithwaite pour récupérer Jack.",0,0,["Headshot Gareth et Gerald Braithwaite", "20 headshots", "Au moins 85 % de précision", "N’utiliser aucun objet de soin"]],
-          ["The Battle of Shady Belle","Avec John, tu élimines les derniers Raiders avant de déplacer le camp.",0,0,["Tuer tous les Raiders de Shady Belle", "Évacuer deux corps en 1 min 40", "Terminer en 11 minutes"]]
+          ["The New South","Sortie à cheval et partie de pêche avec Dutch et Hosea, interrompues par une arrestation qui tourne à la poursuite.",0,[
+            "Retrouve Dutch et Hosea au bord du lac et pars pêcher avec eux. Quand vous croisez le shérif de Rhodes et sa carriole, accompagne les adjoints à la poursuite des fugitifs.",
+            "Rattrape l’homme qui s’enfuit sur le train et maîtrise-le quand tu arrives à sa hauteur. Rejoins ensuite le wagon où se trouve Anders Anderson.",
+            "Affronte Anders à mains nues : bloque ses attaques et contre juste après, sans enchaîner les coups au hasard. Il doit être assommé sans t’avoir touché.",
+            "Charge-le sur ton cheval et ramène-le au bureau du shérif de Rhodes en moins de 5 min 30. Quand Hosea te propose de reprendre la pêche, accepte et attrape un poisson avec lui et Dutch."
+          ],["Assommer Anders Anderson sans recevoir de coup","Le ramener en prison en moins de 5 min 30","Pêcher un poisson avec Dutch et Hosea"]],
+          ["Further Questions of Female Suffrage","Sadie veut quitter le camp et faire quelques achats à Rhodes. Le retour est troublé par les Pillards de Lemoyne.",0,[
+            "Va parler à Pearson, puis accompagne Sadie en chariot jusqu’à Rhodes. Laisse-la au magasin général et dépose sa lettre au bureau de poste.",
+            "Retourne au chariot pour repartir au camp. Des pillards bloquent la route et exigent un paiement : prépare-toi à riposter.",
+            "Mets-toi à couvert et élimine rapidement les assaillants. Enchaîne cinq tirs à la tête en gardant une précision d’au moins 85 %, puis vérifie que Sadie n’est pas encerclée.",
+            "Une fois la route dégagée, remonte au chariot et rentre au camp sans utiliser d’objet de soin."
+          ],["Repousser les Pillards de Lemoyne en moins d’une minute","5 tirs en pleine tête","Au moins 85 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["Money Lending and Other Sins (IV)","★ Strauss t’envoie récupérer deux dettes, auprès de Gwyn Hughes à Rhodes et de Winton Holmes dans les montagnes.",1,[
+            "Parle à Strauss au camp, puis commence par Gwyn Hughes, apprenti croque-mort à Rhodes. Trouve-le au cimetière pendant qu’il déterre une tombe ; récupère la somme qu’il doit à Strauss.",
+            "Pars ensuite vers la cabane de Winton Holmes, au nord de Strawberry. Il propose de t’emmener chasser un cougar afin de payer sa dette avec la peau.",
+            "Suis Winton jusqu’à la grotte et reste prêt à dégainer : le cougar surgit pendant la chasse. Abats l’animal, puis prends sa peau et récupère ce que Winton te doit.",
+            "Retourne au camp et dépose les biens récupérés dans la caisse des dons pour solder cette étape. Cette mission d’honneur n’a pas d’objectif de médaille d’or."
+          ]],
+          ["American Distillation","Archibald te recrute comme adjoint pour démanteler une distillerie clandestine et saisir son alcool.",0,[
+            "Retrouve Archibald au bureau du shérif de Rhodes, puis chevauche avec lui et Dutch. Examinez la diligence suspecte avant de suivre sa piste dans les marécages.",
+            "Approche le camp des contrebandiers accroupi et neutralise-les sans tirer. Ligote le dernier survivant, puis porte-le jusqu’au chariot.",
+            "Prends la dynamite dans le chariot et place-la près de l’alambic indiqué. Éloigne-toi avant de la faire exploser, puis retrouve Bill et la cargaison.",
+            "Pendant la fusillade, vise la tête pour atteindre dix tirs précis et garde au moins 70 % de précision. Ne te fais pas toucher, puis bats Dutch et Bill dans la course de retour au camp."
+          ],["Gagner la course jusqu’au camp","Ne subir aucun dégât","10 tirs en pleine tête","Au moins 70 % de précision"]],
+          ["The Course of True Love (I-II)","★ Beau Gray te confie une lettre pour Penelope Braithwaite, qui appartient à la famille rivale.",1,[
+            "Rejoins Beau près de Caliga Hall et accepte de porter sa lettre à Penelope. Elle se trouve sur le domaine Braithwaite, près d’un kiosque au bord de l’eau.",
+            "Laisse ton cheval à l’extérieur de la propriété et avance à pied. Observe la mini-carte pour éviter les gardes et profite des passages où ils regardent ailleurs pour rejoindre Penelope.",
+            "Remets-lui la lettre, puis ressors du domaine. Pour l’or, ne déclenche pas d’alerte et quitte la zone rouge en longeant le bord de l’eau ; la mission doit aussi être terminée en moins de trois minutes."
+          ],["Atteindre Penelope sans être repéré","Terminer en moins de 3 minutes"]],
+          ["The Course of True Love (III)","★ Beau te demande d’escorter Penelope lors d’un rassemblement pour le droit de vote à Rhodes.",1,[
+            "Retrouve Beau, puis suis-le jusqu’au groupe de manifestantes où Penelope l’attend.",
+            "Prends les rênes du chariot et conduis le groupe vers le centre de Rhodes. Garde une allure régulière et évite les collisions pour gagner du temps.",
+            "Quand les cousins de Beau viennent provoquer le groupe, éloigne Penelope et Beau de la confrontation pour terminer la mission en moins de 4 min 15."
+          ],["Terminer en moins de 4 min 15"]],
+          ["Advertising, the New American Art (I-II)","Hosea et Arthur écoulent l’alcool de contrebande en le livrant au saloon de Rhodes ; la distribution déclenche une bagarre.",0,[
+            "Retrouve Hosea et John près du chariot chargé d’alcool, puis conduis jusqu’au domaine Braithwaite pour récupérer la cargaison.",
+            "Accompagne Hosea au saloon de Rhodes et joue le rôle du barman pendant que l’alcool est servi. Quand les Pillards de Lemoyne débarquent, défends-toi depuis le comptoir.",
+            "Monte à l’étage quand Hosea t’appelle et élimine les ennemis qui s’y trouvent. Pendant la fusillade, réussis cinq headshots dans le saloon et conserve au moins 90 % de précision.",
+            "Rejoins Hosea, reprends le chariot et couvre votre fuite. N’utilise aucun objet de soin jusqu’à la fin de la mission."
+          ],["5 tirs en pleine tête sur les Pillards dans le saloon","Au moins 90 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["Horse Flesh for Dinner","John et Javier t’entraînent dans une opération visant à voler des chevaux de race au domaine Braithwaite.",0,[
+            "Retrouve John et Javier dans les écuries des Gray. Suis-les jusqu’au domaine Braithwaite et attache vos chevaux à l’endroit indiqué.",
+            "Parle au palefrenier et laisse-le te présenter les chevaux. Élimine-le lorsqu’il tourne le dos, comme prévu par le plan, puis entre dans l’écurie.",
+            "Libère les chevaux et approche-toi de l’étalon sombre. Monte-le en moins de dix secondes, puis rejoins John et Javier.",
+            "Fuis à cheval avec le groupe et repousse les poursuivants. Obtiens cinq tirs à la tête pendant la fuite."
+          ],["Tuer le palefrenier qui présente les chevaux","Attraper l’étalon en moins de 10 secondes","5 tirs en pleine tête"]],
+          ["The Fine Joys of Tobacco","Avec Sean, tu t’infiltres à Caliga Hall pour incendier les champs de tabac de la famille Gray.",0,[
+            "Pars en chariot avec Sean vers le domaine Gray. Cache-toi dans la carriole au passage de l’entrée pour ne pas attirer l’attention du garde.",
+            "Une fois au dépôt de chariots, attends que Sean détourne le regard du garde puis élimine discrètement celui-ci.",
+            "Suis Sean vers les champs et utilise les bouteilles d’alcool pour asperger les rangées. Termine cette étape en moins de 2 min 20, puis mets le feu aux plants.",
+            "Fuis à cheval avec Sean et abats cinq Gray qui vous poursuivent. Reste mobile et évite de consommer un objet de soin."
+          ],["Éliminer discrètement le Gray distrait par Sean","Arroser les champs en moins de 2 min 20","Tuer 5 Gray pendant la fuite","Ne pas utiliser d’objet de soin"]],
+          ["Magicians for Sport","Trelawny a disparu. Avec Charles, tu fouilles sa caravane puis suis les traces de ses ravisseurs.",0,[
+            "Rejoins Charles à Rhodes et inspecte soigneusement l’intérieur de la caravane de Trelawny avec l’Œil de lynx. Examine chaque indice avant de sortir.",
+            "Suis les traces à travers les champs en restant tout près de la piste. Quand elle s’interrompt, cherche les indices suivants sans t’éloigner de plus de dix mètres.",
+            "Des chasseurs de primes surgissent dans le champ de maïs. Abats-en deux en moins d’une minute, puis continue à suivre Charles jusqu’à la ferme.",
+            "Après avoir retrouvé Trelawny et neutralisé les hommes qui le retiennent, quitte les lieux avec lui. N’utilise pas d’objet de soin."
+          ],["Inspecter tous les indices de la caravane","Rester à moins de 10 mètres de la piste de Trelawny","Tuer 2 chasseurs de primes dans le champ de maïs en moins d’une minute","Ne pas utiliser d’objet de soin"]],
+          ["Friends in Very Low Places","Trelawny monte une diversion à Rhodes pendant que tu récupères les informations nécessaires au vol d’une diligence.",0,[
+            "Retrouve Trelawny au camp, puis accompagne-le au bureau de poste de Rhodes. Laisse-le distraire le guichetier pendant qu’il obtient l’horaire de passage.",
+            "Rejoins le lieu indiqué et attends le passage de la diligence. Approche-la sans attirer l’attention et prends le contrôle du véhicule dès que le moment est venu.",
+            "Éloigne-toi de la route principale et conduis la diligence jusqu’au point de rendez-vous avec Trelawny. Si quelqu’un t’a vu, la médaille d’or est compromise : reste hors de vue.",
+            "Termine en moins de 8 min 10, sans déclencher d’alerte."
+          ],["Ne pas te faire repérer","Terminer en moins de 8 min 10"]],
+          ["An Honest Mistake","Uncle t’entraîne avec Charles et Bill pour attaquer un convoi de paie appartenant à Cornwall.",0,[
+            "Va parler à Molly au camp : Uncle interrompt la conversation pour proposer le coup. Rejoins-le, Charles et Bill, puis couvre ton visage avant le braquage.",
+            "Intercepte le convoi et fouille le chariot. L’argent n’est pas là où vous l’attendiez : des hommes armés vous prennent en chasse.",
+            "Suis tes compagnons jusqu’à la cabane et tiens la position depuis les fenêtres. Quand un ennemi s’en prend à Uncle, dégage-le immédiatement pour valider l’objectif d’or.",
+            "Sors de la cabane avec le groupe et élimine les derniers poursuivants. Vise la tête pour atteindre vingt tirs précis, garde 80 % de précision et ne prends aucun soin."
+          ],["Sauver Uncle quand un ennemi le maîtrise","20 tirs en pleine tête","Au moins 80 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["Preaching Forgiveness As He Went","Lenny t’emmène vérifier une piste au sujet d’armes stockées par les Pillards de Lemoyne près de Shady Belle.",0,[
+            "Retrouve Lenny et chevauche avec lui jusqu’à l’église abandonnée, puis jusqu’au manoir en ruines de Shady Belle.",
+            "Repère les Pillards avec les jumelles et équipe un fusil à lunette avant d’engager le combat. Utilise les ouvertures entre les arbres et les ruines pour tirer sans t’exposer.",
+            "Élimine dix Pillards avec le fusil de précision. Vérifie tes munitions et la précision, puis avance avec Lenny lorsque la zone est sécurisée.",
+            "Fouille le repaire et repars avec lui. Pour l’or, termine en moins de 11 min 30, avec au moins 70 % de précision et sans objet de soin."
+          ],["Tuer 10 Pillards avec un fusil de précision","Terminer en moins de 11 min 30","Au moins 70 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["Sodom? Back to Gomorrah","Bill organise le braquage de la banque de Valentine. Karen sert de diversion pendant que tu ouvres les coffres.",0,[
+            "Retrouve Bill et le reste du groupe, puis chevauche jusqu’à Valentine. Choisis avec Karen le rôle qu’elle jouera pour attirer l’attention et mets ton foulard avant d’entrer dans la banque.",
+            "Fais ouvrir les coffres, puis déverrouille-les un par un et prends tout leur contenu. Ne quitte pas la salle avant d’avoir vidé chaque coffre.",
+            "Quand l’alarme est donnée, suis le gang dans la rue et couvre la fuite. À cheval, vise cinq représentants de la loi à la tête tout en gardant au moins 70 % de précision.",
+            "Galope jusqu’au ranch Downes en moins de 1 min 55. N’utilise aucun objet de soin pendant la mission."
+          ],["Vider tous les coffres","5 tirs à la tête sur les agents à cheval","Atteindre Downes Ranch en moins de 1 min 55","Au moins 70 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["Blessed are the Peacemakers","Tu surveilles la rencontre de Dutch et Colm depuis les hauteurs. Les O’Driscoll te capturent et t’emmènent dans leur camp.",0,[
+            "Va voir Micah, puis accompagne Dutch jusqu’au lieu de la rencontre avec Colm. Une fois en hauteur, utilise les jumelles et observe l’échange sans quitter ton poste.",
+            "Après avoir été capturé, attends le bon moment pour te libérer. Coupe tes liens avec le couteau, puis traite ta blessure en suivant les commandes à l’écran : il faut finir en moins d’une minute.",
+            "Récupère tes armes dans le camp. Élimine les O’Driscoll qui t’ont frappé et ceux qui t’ont tiré dessus, en restant à couvert.",
+            "Sors du camp sans alerter les gardes. Avance accroupi, surveille leur champ de vision et attends qu’ils regardent ailleurs avant de franchir les passages ouverts."
+          ],["Te libérer et soigner ta blessure en moins d’une minute","Récupérer tes armes au camp","Tuer les O’Driscoll qui t’ont frappé ou tiré dessus","Quitter le camp sans être repéré"]],
+          ["A Short Walk in a Pretty Town","Tu retrouves Bill, Micah et Sean à Rhodes pour une rencontre avec les Gray. Le rendez-vous est un piège.",0,[
+            "Rejoins le groupe sur la place et suis les Gray jusqu’au bureau du shérif. Quand l’embuscade éclate, utilise le Sang-froid pendant la scène où Bill est menacé et abats au moins trois représentants de la loi.",
+            "Poursuis la fusillade en n’utilisant que des armes de poing. Tire à la tête dès que possible pour atteindre vingt headshots ; ne consomme aucun objet de soin.",
+            "Suis tes compagnons hors de la rue et couvre la retraite. Passe les scènes lorsque l’option est proposée et avance sans détour pour finir en moins de 4 min 30."
+          ],["Tuer 3 représentants de la loi en Sang-froid pendant le sauvetage de Bill","N’utiliser que des armes de poing","Terminer en moins de 4 min 30","20 tirs en pleine tête","Ne pas utiliser d’objet de soin"]],
+          ["Blood Feuds, Ancient and Modern","Jack a disparu. Dutch mène la bande au manoir Braithwaite pour le retrouver.",0,[
+            "Suis Dutch et les membres du gang jusqu’au portail du domaine. À son signal, avance avec eux en éliminant les gardes qui bloquent l’allée.",
+            "Progresse de couvert en couvert dans le jardin, puis entre dans le manoir. Vise Gareth et Gerald Braithwaite à la tête lorsqu’ils apparaissent.",
+            "Continue à nettoyer les pièces et les couloirs sans tirer à l’aveugle : il faut vingt tirs en pleine tête et au moins 85 % de précision.",
+            "Retrouve Jack et ressors avec le groupe. N’utilise aucun objet de soin avant la fin de la mission."
+          ],["Tirer dans la tête de Gareth et Gerald Braithwaite","20 tirs en pleine tête","Au moins 85 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["The Battle of Shady Belle","Les Pinkerton ont retrouvé le camp. Avec John, tu pars éliminer les Pillards qui occupent Shady Belle afin d’y déplacer le gang.",0,[
+            "Après la confrontation au camp, chevauche avec John jusqu’au manoir abandonné de Shady Belle.",
+            "Fais le tour de la propriété avec lui et élimine chaque Pillard de Lemoyne dans la maison, la cour et les dépendances. Vérifie qu’il ne reste aucun ennemi avant de souffler.",
+            "À l’intérieur, débarrasse rapidement deux corps de la maison dans les 1 min 40 suivant l’instruction de John. Continue à fouiller les pièces pour repérer les ennemis qui se cachent.",
+            "Termine la mission en moins de 11 minutes, puis aide John à préparer l’arrivée du gang."
+          ],["Tuer tous les Pillards de Lemoyne à Shady Belle","Débarrasser deux corps en moins de 1 min 40","Terminer en moins de 11 minutes"]]
         ]],
         ["Chapitre 4 — Shady Belle","Le gang s’installe près de Saint Denis, dans les marais.",[
           ["The Joys of Civilization","Arrivée à Saint Denis : tu interroges des clients du saloon sur Angelo Bronte.",0,0,["Attraper le gamin des rues avant le marché", "Terminer en 5 min 30"]],
