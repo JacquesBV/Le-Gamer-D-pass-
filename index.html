@@ -179,6 +179,9 @@
     .wt-steps li { margin:5px 0; }
     .wt-gold { margin:6px 0 4px; padding:8px 11px; border-left:3px solid var(--orange); background:rgba(255,155,98,.08); border-radius:6px; color:#e8cdb9; font-size:13px; }
     .wt-gold b { color:var(--orange); }
+    .wt-sources { padding-left:21px; }
+    .wt-sources li { margin:5px 0; }
+    .wt-sources a { color:var(--blue); text-decoration:underline; text-underline-offset:2px; }
     @media (max-width:900px) {
       .hero-grid { grid-template-columns:1fr; }
       .hero-art { min-height:300px; }
@@ -365,12 +368,28 @@
     // Soluce complète de Red Dead Redemption 2 (format : [nom, texte, optionnelle?])
     const rdr2Walkthrough = {
       tips:[
-        "Le chapitre 1 est détaillé pas à pas. La soluce reprend au chapitre 2 à A Quiet Time et détaille ensuite les missions du chapitre 3. Spoilers : cette soluce raconte le déroulement de l’histoire, du début à la fin.",
-        "Les missions marquées ★ sont des missions d’honneur facultatives : elles se ratent si tu avances trop loin dans l’histoire, et il les faut toutes pour le succès « Lending a Hand ».",
-        "Chaque mission peut être rejouée depuis Pause > Progression > Histoire. Pour la médaille d’or, tous les objectifs doivent être remplis dans une seule partie de la mission (70 médailles d’or débloquent « Gold Rush »).",
-        "Ton niveau d’honneur influence la dernière scène d’Arthur : aide les inconnus, épargne les innocents et évite de piller les gens sans défense.",
-        "Avant la mission « Red Dead Redemption » (fin du chapitre 6), termine tes activités avec Arthur et crée un second emplacement de sauvegarde : ensuite, tu incarnes John.",
+        "Les chapitres 1 à 3 conservent leur soluce actuelle ; cette suite détaillée commence au chapitre 4 et va jusqu’à la dernière mission de l’épilogue. Spoilers majeurs sur toute l’histoire.",
+        "Les missions marquées ★ sont des missions d’honneur facultatives et manquables. Termine-les avant de progresser trop loin si tu vises le succès ou trophée « Lending a Hand ».",
+        "Pour une médaille d’or, tous les objectifs doivent être réussis au cours d’une seule partie de la mission. Tu peux rejouer depuis Pause > Progression > Histoire ; le rejeu impose cependant un équipement et des consommables limités.",
+        "Quand un objectif interdit les objets de soin, évite les toniques de santé. Les objets qui ne restaurent que le Sang-froid sont généralement acceptés ; vérifie la formulation du défi dans le menu.",
+        "L’honneur influence certaines scènes de fin d’Arthur. Dans Red Dead Redemption, le choix d’aider John ou de retourner chercher l’argent mène à des variantes différentes.",
+        "Avant la dernière mission d’Arthur, termine tes activités avec lui et crée une sauvegarde manuelle séparée. Après le chapitre 6, tu joues John dans les deux parties de l’épilogue.",
+        "High and Low Finance est une mission bonus réservée aux éditions spéciale et ultime. Les guides listés plus bas recoupent les objectifs de médaille ; le texte des étapes est reformulé en français.",
         "Sur PC, si le jeu plante, essaie de passer de DirectX 12 à Vulkan (ou inversement) dans les options graphiques."
+      ],
+      sources:[
+        ["RDR2.fr — Missions du chapitre 4 (français)","https://www.rdr2.fr/missions-chapitre-4.html"],
+        ["RDR2.fr — Missions du chapitre 5 (français)","https://www.rdr2.fr/missions-chapitre-5.html"],
+        ["RDR2.fr — Missions du chapitre 6 (français)","https://www.rdr2.fr/missions-chapitre-6.html"],
+        ["RDR2.fr — Épilogue, partie 1 (français)","https://www.rdr2.fr/missions-epilogue-partie-1.html"],
+        ["RDR2.fr — Épilogue, partie 2 (français)","https://www.rdr2.fr/missions-epilogue-partie-2.html"],
+        ["RDR2.org — Guide détaillé du chapitre 4 (anglais)","https://www.rdr2.org/guides/chapter-4-missions-and-gold-medals-guide/"],
+        ["RDR2.org — Guide détaillé du chapitre 5 (anglais)","https://www.rdr2.org/guides/chapter-5-missions-and-gold-medals-guide/"],
+        ["RDR2.org — Guide détaillé du chapitre 6 (anglais)","https://www.rdr2.org/guides/chapter-6-missions-gold-medals-guide/"],
+        ["RDR2.org — Guide de l’épilogue, partie 1 (anglais)","https://www.rdr2.org/guides/epilogue-1-missions-and-gold-medals-guide/"],
+        ["RDR2.org — Guide de l’épilogue, partie 2 (anglais)","https://www.rdr2.org/guides/epilogue-2-missions-and-gold-medals-guide/"],
+        ["PowerPyx — Liste complète des médailles d’or (anglais)","https://www.powerpyx.com/red-dead-redemption-2-gold-medals-guide/"],
+        ["GameFAQs — Épilogue, partie 2 : ordre des missions et The Best of Women (anglais)","https://gamefaqs.gamespot.com/xboxone/200180-red-dead-redemption-2/faqs/76594/epilogue-part-2-beechers-hope"]
       ],
       chapters:[
         ["Chapitre 1 — Colter","Le gang, affamé, survit dans les montagnes enneigées. Ce chapitre est détaillé pas à pas, avec les objectifs de médaille d’or.",[
@@ -605,82 +624,447 @@
             "Termine la mission en moins de 11 minutes, puis aide John à préparer l’arrivée du gang."
           ],["Tuer tous les Pillards de Lemoyne à Shady Belle","Débarrasser deux corps en moins de 1 min 40","Terminer en moins de 11 minutes"]]
         ]],
-        ["Chapitre 4 — Shady Belle","Le gang s’installe près de Saint Denis, dans les marais.",[
-          ["The Joys of Civilization","Arrivée à Saint Denis : tu interroges des clients du saloon sur Angelo Bronte.",0,0,["Attraper le gamin des rues avant le marché", "Terminer en 5 min 30"]],
-          ["Angelo Bronte, a Man of Honor","Bronte accepte de t’aider pour Jack si le gang nettoie un cimetière. Prépare des munitions.",0,0,["Croiser le chien et l’ivrogne", "Ne pas te faire repérer par la police", "Terminer en 10 min 40", "4 headshots"]],
-          ["Money Lending and Other Sins (V)","★ Récupère la dette d’Algie Davison.",1],
-          ["Help a Brother Out","★ Frère Dorkins te demande d’enquêter sur un magasin suspect.",1,0,["Trouver les captifs sans menacer le propriétaire du magasin", "Terminer en 2 min 45"]],
-          ["Brothers and Sisters, One and All","★ Rattrape l’enfant des rues qui a volé le crucifix de Sœur Calderón.",1,0,["Retrouver le gamin en 19 secondes"]],
-          ["Fatherhood and Other Dreams (I-II)","★ Mary veut que tu retrouves un bijou de famille vendu par son père joueur.",1,0,["Rattraper le chariot et l’amener à l’endroit isolé en 1 min 45", "Emmener Mary au théâtre"]],
-          ["No, No and Thrice, No","Avec Susan, tu sauves Tilly, kidnappée par les frères Foreman.",0,0,["Tuer toi-même les deux frères Foreman pendant la poursuite", "Au moins 90 % de précision"]],
-          ["The Gilded Cage","Soirée mondaine chez le maire de Saint Denis : discussions et repérage de nouveaux coups.",0,0,["À la soirée : servir des verres, complimenter la tenue d’un invité, accepter un cadeau et sauver une vie", "Suivre le domestique sans te faire repérer"]],
-          ["American Fathers (I-II)","Avec Eagle Flies, tu t’introduis dans Cornwall Kerosene and Tar pour voler un rapport sur le pétrole de la réserve.",0,0,["S’infiltrer dans l’usine en te cachant dans le chariot", "Atteindre le bureau de Danbury sans être détecté", "Tuer tous les poursuivants à cheval pendant la fuite", "Au moins 80 % de précision"]],
-          ["A Fine Night of Debauchery","Tournoi de cartes sur le Grand Korrigan, truqué avec l’aide de Strauss et Trelawny.",0,0,["Gagner au poker sans l’aide de Strauss", "Quitter le bateau en moins de 35 secondes après que ta couverture a sauté", "5 headshots", "N’utiliser aucun objet de soin"]],
-          ["High and Low Finance","Mission réservée à l’édition spéciale : braquage de la banque de Rhodes à la dynamite."],
-          ["Horsemen, Apocalypses","Les O’Driscoll attaquent le camp après avoir renvoyé le corps de Kieran. Défends le camp avec Sadie.",0,0,["Abattre les O’Driscoll dans le bateau avant qu’ils débarquent", "N’utiliser que des armes de poing", "Au moins 70 % de précision", "15 headshots", "N’utiliser aucun objet de soin"]],
-          ["Urban Pleasures","Tu braques un tramway sur un tuyau de Bronte : c’était un piège.",0,0,["Détrousser tous les clients de la station de tramway", "Tuer 10 agents depuis le tramway", "Empêcher les agents de sauter à l’arrière du chariot", "Tirer sur la dynamite lancée par Lenny", "N’utiliser aucun objet de soin"]],
-          ["Country Pursuits","Tu prépares l’assaut contre Bronte en te procurant une barque.",0,0,["Ramener Jules au skiff en 1 min 40", "Toucher l’alligator 5 fois"]],
-          ["Revenge is a Dish Best Eaten","Assaut du manoir de Bronte depuis le fleuve.",0,0,["Fouiller chaque pièce du manoir de Bronte", "Porter Bronte jusqu’au skiff en 1 min 30", "20 headshots", "N’utiliser aucun objet de soin"]],
-          ["Banking, the Old American Art","Dernier gros coup : la banque de Saint Denis. Le braquage tourne mal et le chapitre se termine.",0,0,["Ouvrir le coffre sans aucune erreur", "N’utiliser que des armes de poing", "25 headshots", "N’utiliser aucun objet de soin"]]
+        ["Chapitre 4 — Shady Belle","Le gang s’installe près de Saint Denis. Les missions d’honneur et certaines activités bonus sont insérées au moment où elles se débloquent ; l’ordre des missions disponibles en parallèle peut varier.",[
+          ["The Joys of Civilization","À Saint Denis, Arthur et Dutch cherchent une piste menant à Angelo Bronte.",0,[
+            "Retrouve Dutch au saloon Bastille. Entre, commande un whisky au barman et demande-lui ce qu’il sait sur Angelo Bronte.",
+            "À la sortie, traverse l’allée derrière le saloon et l’arche pour rejoindre les gamins des rues. Suis-les jusqu’à l’église : l’un d’eux te dérobe tes affaires.",
+            "Pars aussitôt à sa poursuite. Quand il saute sur le tramway, prends le cheval qui attend dans la rue pour rester à sa hauteur, puis plaque-le dès qu’il quitte les rails et s’engage dans une ruelle.",
+            "Ne t’arrête pas pour interroger les passants et coupe les cinématiques si tu vises l’or. Après avoir récupéré tes affaires, retourne aux bancs devant le saloon et retrouve Dutch."
+          ],["Rattraper le gamin avant qu’il n’atteigne le marché","Terminer en moins de 5 min 30 s"]],
+          ["Angelo Bronte, a Man of Honor","Bronte promet de rendre Jack si le gang débarrasse le cimetière de voleurs de tombes.",0,[
+            "Retrouve Dutch et John, puis accompagne-les au manoir de Bronte. Accepte le marché et pars avec John vers le cimetière.",
+            "Dans le cimetière, explore les allées et repère le chien puis l’ivrogne pour valider ces deux rencontres facultatives de la médaille.",
+            "Suis les bruits de pierres qui s’effondrent jusqu’aux pilleurs. À l’ouverture du combat, utilise le Sang-froid pour obtenir quatre tirs à la tête, puis fouille le butin indiqué.",
+            "Des policiers quadrillent les lieux : reste hors de leurs cônes de vision, attends que les patrouilles s’éloignent et suis John sans courir devant lui. Rejoins ton cheval et retourne au manoir avec les objets récupérés."
+          ],["Rencontrer le chien et l’ivrogne","Ne pas être repéré par la loi","Terminer en moins de 10 min 40 s","Faire 4 tirs en pleine tête"]],
+          ["No, No and Thrice No","Avec Susan, tu pars délivrer Tilly, enlevée par les frères Foreman.",0,[
+            "Parle à Susan au camp, puis conduis le chariot jusqu’à Radley’s House près de Rhodes. Laisse Susan neutraliser le guetteur et entre dans la maison.",
+            "Débarrasse-toi des hommes à l’intérieur en visant proprement, puis suis les appels de Tilly jusqu’à la pièce où elle est retenue.",
+            "À la sortie, poursuis les fuyards à cheval. Abats toi-même les deux Foreman qui chevauchent devant toi : active le Sang-froid et attends d’avoir une ligne de tir dégagée pour préserver la précision.",
+            "Rattrape ensuite Anthony Foreman au lasso, ligote-le et ramène-le auprès de Susan et Tilly. La décision prise à la fin influence l’honneur, pas la médaille."
+          ],["Tuer toi-même les deux Foreman pendant la poursuite","Terminer avec au moins 90 % de précision"]],
+          ["Money Lending and Other Sins (V)","★ Strauss t’envoie recouvrer la dette d’Algie Davison, à Catfish Jacksons. Cette mission n’a pas de médaille d’or.",1,[
+            "Parle à Strauss à Shady Belle, puis rends-toi à Catfish Jacksons, au sud-ouest du camp, pour trouver Algie près de la rive.",
+            "Interroge-le et entre dans la maison lorsqu’il t’indique où se trouve l’argent. Après l’altercation, inspecte le coffre près du lit et prends les billets.",
+            "Retourne à Shady Belle et dépose la somme dans la caisse des dons pour clore le recouvrement."
+          ]],
+          ["Help a Brother Out","★ Frère Dorkins te demande d’enquêter sur un commerce soupçonné de cacher des captifs.",1,[
+            "Va parler à Frère Dorkins dans le quartier est de Saint Denis et accepte de vérifier la boutique qu’il t’indique.",
+            "À l’intérieur, ne menace pas le commerçant. Examine le livre rouge posé sur une étagère : il révèle l’entrée d’une cave dissimulée.",
+            "Descends, libère les deux captifs et ramène-les auprès de Frère Dorkins. Pour l’or, fais cette recherche directement plutôt que de perdre du temps à faire avouer le propriétaire."
+          ],["Trouver les captifs sans menacer le propriétaire","Terminer en moins de 2 min 45 s"]],
+          ["Brothers and Sisters, One and All","★ Un enfant vole le crucifix de sœur Calderón ; Arthur doit le rattraper et revenir à l’église.",1,[
+            "Rejoins Frère Dorkins et sœur Calderón à Saint Denis. Dès que le garçon s’enfuit, sprinte dans la rue, tourne à gauche au bout puis à droite vers l’homme qui l’a arrêté.",
+            "Interviens pour récupérer le crucifix. Il faut atteindre le garçon en moins de 19 secondes : ne parle à personne et ne détourne pas ta trajectoire.",
+            "Quand la police te recherche, éloigne-toi d’abord de la zone et contourne les cônes rouges de la mini-carte. Reviens ensuite à l’église et rends le crucifix à sœur Calderón."
+          ],["Retrouver le garçon en moins de 19 s"]],
+          ["Fatherhood and Other Dreams (I-II)","★ Mary demande à Arthur de récupérer un bijou familial vendu par son père, puis l’invite au théâtre.",1,[
+            "Lis la lettre de Mary dans la chambre d’Arthur à Shady Belle, puis rejoins-la à Saint Denis et accepte de l’aider.",
+            "Suis son père à distance jusqu’à ce qu’il vende la broche. Dès que tu reprends le contrôle, saute sur le cheval le plus proche, poursuis la diligence et bondis dessus pour en prendre les rênes.",
+            "Conduis le chariot vers l’endroit isolé indiqué en moins de 1 min 45 s. Récupère la broche auprès de l’acheteur, en payant ou en le frappant, puis retrouve Mary.",
+            "Accepte son invitation au théâtre et accompagne-la jusqu’à la salle : cette sortie est nécessaire pour le second objectif d’or. Tu peux quitter la représentation dès que le jeu le permet."
+          ],["Rattraper le chariot et l’amener à l’endroit isolé en 1 min 45 s","Emmener Mary au théâtre"]],
+          ["The Gilded Cage","La bande assiste à une réception chez le maire de Saint Denis pour nouer des contacts et écouter les notables.",0,[
+            "Retrouve Hosea au camp et accompagne Dutch, Bill et lui jusqu’à la réception. Après les salutations, mêle-toi aux invités et valide les quatre interactions demandées.",
+            "Sers du champagne aux femmes près de l’escalier, complimente la tenue de l’invitée au chapeau à plumes et accepte les billets que proposent les deux hommes qui parlent de cabaret.",
+            "Repère l’invité qui s’étouffe à l’ouest des escaliers et porte-lui secours. Va ensuite parler au maire et conduis le convive ivre à l’endroit indiqué.",
+            "Quand le message de Cornwall arrive, suis le domestique sans le coller : garde tes distances, attends qu’il tourne le dos et passe d’une pièce à l’autre sans entrer dans son champ de vision.",
+            "À l’étage, laisse-le déposer la lettre dans le tiroir, récupère-la une fois qu’il s’est éloigné, puis retourne discrètement auprès du gang."
+          ],["À la réception : servir des verres, complimenter une tenue, accepter un cadeau et sauver une vie","Suivre le domestique sans être repéré"]],
+          ["A Fine Night of Debauchery","Avec Trelawny et Strauss, tu truques une partie de poker à bord du Grand Korrigan.",0,[
+            "Retrouve Trelawny à Saint Denis. Achète la tenue Whittemore chez le tailleur, fais-toi raser et coiffer, puis prends la voiture jusqu’au bateau.",
+            "Laisse tes armes à l’entrée et rejoins la table de poker. Pour l’or, ne sollicite pas les signes de Strauss : couche-toi sur la première main, puis mise sur les suivantes jusqu’à gagner l’argent et la montre de Desmond Blythe.",
+            "Suis le chef de salle jusqu’au coffre. Quand Javier intervient, désarme le responsable et vide le coffre ; le Sang-froid se déclenche pour neutraliser son complice.",
+            "Après que ta couverture a sauté, file vers la sortie et saute dans l’eau. Utilise le Sang-froid pour placer cinq tirs à la tête et ne prends aucun objet de soin."
+          ],["Gagner au poker sans l’aide de Strauss","Quitter le bateau en moins de 35 s après avoir été découvert","Faire 5 tirs en pleine tête","Ne pas utiliser d’objet de soin"]],
+          ["American Fathers (I-II)","Arthur aide Rains Fall et Eagle Flies à obtenir des preuves sur les forages de Cornwall Kerosene & Tar.",0,[
+            "Commence par parler à Evelyn Miller à Saint Denis, puis rencontre Rains Fall et Eagle Flies. Quand la suite de la mission apparaît, retrouve Eagle Flies à Citadel Rock.",
+            "Pour entrer dans l’usine, attends le chariot qui arrive et cache-toi dedans. Une fois déposé dans l’enceinte, avance accroupi en observant les cônes de détection sur la mini-carte.",
+            "Contourne les ouvriers et les gardes, puis rejoins le bureau de Danbury sans déclencher l’alerte. Menace-le jusqu’à ce qu’il te remette le rapport et sors par la fenêtre.",
+            "La fuite devient une fusillade. Mets-toi à couvert, vise les lanternes quand elles peuvent toucher plusieurs ennemis et garde au moins 80 % de précision.",
+            "À cheval, élimine tous les poursuivants montés avant de quitter la zone : repère-les sur la mini-carte et réserve le Sang-froid à ceux qui restent derrière le groupe."
+          ],["Entrer dans l’usine en se cachant dans le chariot","Atteindre le bureau de Danbury sans être repéré","Tuer tous les poursuivants à cheval","Terminer avec au moins 80 % de précision"]],
+          ["High and Low Finance","Mission bonus réservée aux éditions spéciale et ultime : Arthur, Charles et l’Oncle attaquent la banque de Rhodes.",0,[
+            "Parle à Charles et à l’Oncle au camp, puis rejoins Rhodes pour observer le mur fragile de la banque. Attends la nuit avant de passer à l’action.",
+            "Neutralise discrètement le garde de l’entrée. Laisse Charles placer les charges, prends la bobine du détonateur et retourne à l’interrupteur pour faire sauter le mur à son signal.",
+            "Ouvre les trois coffres révélés par l’explosion — un petit et deux grands — puis récupère l’argent. Ne traîne pas : le chronomètre de 5 min 45 s couvre la mission entière.",
+            "Après le braquage, fonce vers ton cheval et pars sans chercher à combattre les hommes de loi. Pendant la fuite, esquive les tirs et les collisions : tu ne dois pas être touché."
+          ],["Terminer en moins de 5 min 45 s","Ne subir aucun dégât pendant la fuite"]],
+          ["Horsemen, Apocalypse","Les O’Driscoll attaquent Shady Belle après avoir renvoyé le corps de Kieran. Défends le camp avec Sadie.",0,[
+            "Quand l’attaque éclate, reste sur le balcon et équipe uniquement des revolvers ou pistolets. Ne sors pas de fusil ou de fusil à pompe : la restriction vaut pour toute la mission.",
+            "Abats immédiatement les O’Driscoll dans la barque avant qu’ils ne touchent la rive. Enchaîne les tirs à la tête et conserve une précision d’au moins 70 %.",
+            "Descends quand Dutch t’appelle, aide les membres du gang et bloque la porte avec le meuble indiqué. Tire depuis les ouvertures en restant à couvert.",
+            "Rejoins Sadie près de l’eau. Une seconde barque arrive : élimine ses passagers avant leur débarquement, puis termine les ennemis qui restent près du manoir.",
+            "Vise quinze têtes au total et n’utilise aucun objet de soin. Les objets qui restaurent seulement le Sang-froid ne pénalisent pas l’objectif de santé."
+          ],["Abattre les O’Driscoll dans la barque avant leur débarquement","N’utiliser que des armes de poing","Atteindre 70 % de précision","Faire 15 tirs en pleine tête","Ne pas utiliser d’objet de soin"]],
+          ["Urban Pleasures","Le braquage de la station de tramway de Saint Denis tourne au piège tendu par Bronte.",0,[
+            "Entre dans la station avec Dutch et Lenny. Avant d’ouvrir le coffre, menace puis détrousse chacun des clients présents : vérifie qu’il n’en reste aucun dans la salle.",
+            "Quand la loi arrive, monte dans le tramway et élimine dix policiers pendant qu’il roule. Tire par petites rafales pour compter les victimes sans gaspiller les munitions.",
+            "Après le crash, suis Dutch et Lenny jusqu’au chariot. Pendant la fuite, vise d’abord les cavaliers qui s’approchent de l’arrière : aucun policier ne doit réussir à monter à bord.",
+            "Quand Lenny lance la dynamite près du barrage, tire sur le bâton avant qu’il explose. Reste à couvert dès que tu es à pied.",
+            "Ne prends aucun objet de soin pendant la mission ; économise tes tonics de santé et utilise plutôt le couvert."
+          ],["Détrousser tous les clients de la station","Tuer 10 policiers depuis le tramway","Empêcher les policiers de monter à l’arrière du chariot","Tirer sur la dynamite lancée par Lenny","Ne pas utiliser d’objet de soin"]],
+          ["Country Pursuits","Pour préparer l’assaut contre Bronte, Arthur accompagne Dutch chez le pêcheur Thomas dans les marais.",0,[
+            "Rejoins Dutch à Lagras et suis Thomas en barque pour relever les pièges à écrevisses. Descends aux endroits signalés et reste immobile si un alligator passe tout près.",
+            "Lorsque Jules manque à l’appel, rame jusqu’à la zone de recherche et appelle-le. Suis sa voix jusqu’à l’arbre où il s’est réfugié.",
+            "Récupère le skiff coincé dans les branches, ramène-le à Thomas puis retourne chercher Jules. Quand l’alligator l’entraîne dans l’eau, plonge vers son appel et tire-le hors du marais.",
+            "Ramène Jules au skiff en moins de 1 min 40 s à partir du sauvetage : nage droit vers lui au lieu de chercher à combattre l’alligator.",
+            "Quand le gros alligator surgit près de l’embarcation, tire-lui cinq fois dessus. Le Sang-froid aide à placer les impacts dès qu’il apparaît à la surface.",
+            "Après la dernière attaque, soigne Jules selon les indications à l’écran et laisse la scène se terminer."
+          ],["Ramener Jules au skiff en moins de 1 min 40 s","Toucher le grand alligator 5 fois"]],
+          ["Revenge is a Dish Best Eaten","Le gang attaque le manoir de Bronte par la rivière pour se venger du piège du tramway.",0,[
+            "Retrouve Dutch au quai de Thomas, monte dans la barque et suis le groupe jusqu’au domaine. Quand Arthur et John contournent la maison, avance accroupi jusqu’aux gardes.",
+            "Choisis de t’occuper des gardes avec John : leurs tirs faciles aident à atteindre les vingt headshots. Reste derrière les couverts et ne consomme aucun soin.",
+            "Entre dans le manoir et fouille chaque pièce signalée aux deux étages. À l’étage, vide d’abord les chambres latérales ; garde la pièce centrale pour la fin, car elle déclenche la suite.",
+            "Après avoir trouvé Bronte, prends-le sur ton épaule et cours vers le skiff. Le trajet doit être terminé en 1 min 30 s ; laisse tes alliés couvrir les poursuivants.",
+            "Continue les tirs à la tête jusqu’à en avoir vingt, mais ne t’arrête pas au milieu de la fuite si le compteur est déjà validé."
+          ],["Fouiller chaque pièce du manoir","Porter Bronte au skiff en moins de 1 min 30 s","Faire 20 tirs en pleine tête","Ne pas utiliser d’objet de soin"]],
+          ["Banking, the Old American Art","Le gang tente de dévaliser la banque de Saint Denis ; l’arrivée des Pinkerton bouleverse le plan.",0,[
+            "Retrouve Dutch à Shady Belle, puis pars vers la banque avec le gang. Quand Bill donne le signal, mets le masque et force l’entrée.",
+            "Menace le directeur pour qu’il ouvre le coffre. Compose la combinaison 19, 72, 54 sans erreur : tourne le cadran doucement et valide chaque cran au bon moment.",
+            "Dès que les Pinkerton attaquent, garde les armes de poing sorties pour toute la fusillade et accumule vingt-cinq tirs à la tête. Reste derrière les bureaux et les rebords de toit.",
+            "N’utilise aucun objet de soin. Quand Dutch te remet la dynamite, place-la sur le mur, recule puis tire sur la charge pour ouvrir une sortie.",
+            "Si Javier te tend un fusil, laisse-le de côté et poursuis avec tes armes de poing. Avance de toit en toit derrière Dutch, neutralise les ennemis et rejoins le point de rendez-vous aux docks."
+          ],["Ouvrir le coffre sans faire d’erreur","N’utiliser que des armes de poing","Faire 25 tirs en pleine tête","Ne pas utiliser d’objet de soin"]]
         ]],
-        ["Chapitre 5 — Guarma","Naufragé sur une île, Arthur tente de retrouver ses compagnons.",[
-          ["Welcome to the New World","Échoué sur l’île, tu cherches le reste du gang.",0,0,["Ne pas traîner derrière la chaîne de forçats", "10 headshots"]],
-          ["Savagery Unleashed","Pour obtenir un passage de retour, tu libères des ouvriers locaux.",0,0,["Libérer tous les ouvriers en 4 secondes", "Terminer en 5 min 40", "8 headshots"]],
-          ["A Kind and Benevolent Despot","Avec Dutch et Gloria, tu t’infiltres chez Fussar pour libérer Javier.",0,0,["Mettre Javier en sécurité en moins de 2 minutes", "10 headshots"]],
-          ["Hell Hath No Fury","À Cinco Torres, vous dégagez les eaux autour de l’île.",0,0,["Empêcher 4 bateaux d’atteindre la rive", "Détruire le navire sans rater un tir", "Au moins 70 % de précision"]],
-          ["Paradise Mercifully Departed","Tu détruis les batteries côtières et sauves le capitaine pour pouvoir partir.",0,0,["Tuer les 2 premières sentinelles sans te faire repérer", "Escorter le capitaine jusqu’au bateau en 1 min 45", "Terminer en 6 min 45", "25 headshots"]],
-          ["Dear Uncle Tacitus","De retour en Amérique, tu retournes à Shady Belle chercher les autres.",0,0,["Quitter Shady Belle sans être détecté par les Pinkerton", "Terminer en 8 minutes"]],
-          ["Fleeting Joy","Retrouvailles à Lakay, vite interrompues par une attaque des Pinkertons.",0,0,["Tuer 2 Pinkerton pendant l’embuscade en Dead Eye", "5 headshots à la mitrailleuse Gatling", "Au moins 70 % de précision avec la Gatling", "N’utiliser aucun objet de soin"]],
-          ["A Fork in the Road","Arthur s’effondre à Saint Denis et se réveille chez un médecin.",0,0,["Terminer en 3 min 5"]],
-          ["That’s Murfree Country","Avec Charles, tu cherches un nouveau camp à Beaver Hollow.",0,0,["Ramener Meredith à sa mère en 2 minutes", "15 headshots", "Au moins 85 % de précision", "N’utiliser aucun objet de soin"]]
+        ["Chapitre 5 — Guarma","Naufragé sur une île, Arthur tente de retrouver le gang et de quitter le territoire de Fussar. Les affrontements se suivent rapidement : fais le plein de munitions dès que le jeu le permet.",[
+          ["Welcome to the New World","Seul après le naufrage, Arthur retrouve ses compagnons et se retrouve enrôlé dans une colonne de forçats.",0,[
+            "Depuis la plage, avance vers la fumée pour trouver Dutch et les autres. Quand les soldats vous capturent, marche avec la chaîne sans ralentir ni rester derrière le groupe.",
+            "À l’attaque des rebelles, ramasse l’arme disponible et mets-toi derrière les rochers. Les adversaires arrivent par vagues ; utilise le Sang-froid pour viser les têtes.",
+            "Continue de suivre Hercule vers le prochain point défensif et profite des ennemis qui s’enfuient pour compléter les dix headshots.",
+            "Reste avec les rebelles jusqu’à ce que le dernier groupe se replie : il faut dix tirs à la tête au total, sans perdre le rythme de marche au début."
+          ],["Ne pas se laisser distancer par les forçats","Faire 10 tirs en pleine tête"]],
+          ["A Kind and Benevolent Despot","Avec Gloria, Dutch et Arthur s’infiltrent dans la propriété de Fussar pour libérer Javier.",0,[
+            "Retrouve Dutch et suis Gloria jusqu’à la porte métallique. Aide à l’ouvrir, avance dans le complexe et reste derrière lui lorsque des gardes patrouillent.",
+            "Dans la raffinerie, attends que les gardes s’éloignent, neutralise-les discrètement puis dérègle l’installation : ouvre la vanne, ferme les volets et éventre le sac de sucre indiqué.",
+            "Quand la diversion attire les soldats, rejoins les cages et libère Javier. Dutch le porte : reste à proximité pour qu’il avance et tire sur les hommes qui lui barrent le passage.",
+            "Vise dix ennemis à la tête pendant l’évasion. Une fois Javier mis en sécurité, le chrono de deux minutes est terminé ; tu peux alors éliminer les poursuivants restants avant de rejoindre le camp."
+          ],["Mettre Javier en sécurité en moins de 2 min","Faire 10 tirs en pleine tête"]],
+          ["Savagery Unleashed","Arthur aide Hercule et Leon à libérer des ouvriers capturés par les hommes de Fussar.",0,[
+            "Quand tu te réveilles ligoté, balance-toi avec le stick pour faire tomber la chaise, puis assomme le garde. Rejoins Leon et avance accroupi en le laissant guider les déplacements.",
+            "À l’arrivée devant les ouvriers, active le Sang-froid et coupe leurs liens en tirant sur les cordes presque simultanément : les trois doivent être libres dans une fenêtre de quatre secondes.",
+            "La fusillade éclate aussitôt. Abats d’abord le tireur en hauteur, puis vise les têtes depuis les couverts pour atteindre huit headshots.",
+            "Reste au contact de Leon pendant la sortie et élimine les soldats sans t’attarder. Passe les cinématiques pour finir en moins de 5 min 40 s."
+          ],["Libérer tous les ouvriers en moins de 4 s","Terminer en moins de 5 min 40 s","Faire 8 tirs en pleine tête"]],
+          ["Hell Hath No Fury","Les rebelles de Guarma défendent la forteresse de Cinco Torres contre l’assaut de Fussar.",0,[
+            "Depuis les remparts, repousse les soldats qui débarquent sur la plage et aide Hercule à déplacer le canon quand il le demande.",
+            "Garde du Sang-froid pour les barques : empêche au moins quatre d’entre elles d’atteindre la rive, en tirant sur les hommes plutôt que dans l’eau.",
+            "Quand les vagues sont repoussées, rejoins Dutch et Hercule au canon. Ajuste la visée légèrement au-dessus de la coque du navire de guerre.",
+            "Tire chaque coup du canon sur la cible, sans en manquer un, jusqu’à sa destruction. Pour les 70 % de précision, évite les tirs précipités sur les ennemis éloignés."
+          ],["Empêcher 4 barques d’atteindre la rive","Détruire le navire sans rater un tir de canon","Terminer avec au moins 70 % de précision"]],
+          ["Paradise Mercifully Departed","Pour quitter Guarma, Arthur et Dutch détruisent les canons côtiers et libèrent le capitaine du navire.",0,[
+            "Suis Hercule jusqu’aux deux sentinelles et neutralise-les avec Micah sans déclencher l’alerte. Pose ensuite la charge sur le premier canon.",
+            "La détonation lance la fusillade. Avance avec le groupe, élimine les ennemis à la tête et surveille les tireurs embusqués pendant que Micah s’occupe du second canon.",
+            "Continue à compter tes headshots : il en faut vingt-cinq. Quand le capitaine est rejoint, aide à neutraliser les derniers soldats et cours jusqu’au bateau avec lui en moins de 1 min 45 s.",
+            "Lorsque Fussar prend le canon, déplace-toi vers la pièce d’artillerie indiquée et tire une fois sur lui pour clore la fuite. Passe les scènes afin de tenir aussi le temps total de 6 min 45 s."
+          ],["Éliminer les deux premières sentinelles sans être repéré","Escorter le capitaine au bateau en moins de 1 min 45 s","Terminer en moins de 6 min 45 s","Faire 25 tirs en pleine tête"]],
+          ["Dear Uncle Tacitus","De retour sur le continent, Arthur retourne à Shady Belle pour retrouver les membres du gang disparus.",0,[
+            "À Van Horn, monte sur le cheval signalé et galope jusqu’à Shady Belle en suivant le point jaune.",
+            "Dans le camp vide, fouille la pièce indiquée et lis la lettre laissée à l’Oncle pour apprendre que le groupe est parti à Lakay.",
+            "Quand les Pinkerton arrivent, reste caché dans la maison et laisse la patrouille entrer. Glisse derrière le dernier agent, sors sans être vu et enfourche ton cheval.",
+            "Galope jusqu’à Lakay sans faire de détour. Évite le combat avec la patrouille : il faut quitter Shady Belle sans être repéré et terminer en moins de huit minutes."
+          ],["Quitter Shady Belle sans être repéré par les Pinkerton","Terminer en moins de 8 min"]],
+          ["Fleeting Joy","Le gang s’est regroupé à Lakay, mais les Pinkerton lancent aussitôt une attaque.",0,[
+            "Suis Sadie à travers la trappe et rejoins la maison d’où le gang peut défendre le camp. Au déclenchement du Sang-froid automatique, élimine au moins deux Pinkerton.",
+            "Passe d’un couvert à l’autre pendant les vagues d’assaut et n’utilise aucun objet de soin. Les objets dédiés au Sang-froid restent utilisables s’ils ne restaurent pas la santé.",
+            "Quand Dutch te demande de prendre la mitrailleuse Gatling, vise des cibles nettes et tire par courtes rafales pour préserver la précision.",
+            "Fais cinq tirs à la tête avec la Gatling et maintiens 70 % de précision avec cette arme. Arrête de tirer dès qu’un ennemi tombe, puis balaye les derniers assaillants."
+          ],["Tuer 2 Pinkerton pendant l’embuscade en Sang-froid","Faire 5 tirs en pleine tête avec la Gatling","Atteindre 70 % de précision avec la Gatling","Ne pas utiliser d’objet de soin"]],
+          ["A Fork in the Road","À Saint Denis, Arthur s’effondre et doit se rendre chez un médecin. La scène et la vision finale varient selon l’honneur.",0,[
+            "Après l’attaque de Lakay, entre dans Saint Denis et dirige-toi vers le médecin dès que tu reprends le contrôle d’Arthur.",
+            "Parle à la réceptionniste, entre dans le cabinet puis assieds-toi pour la consultation. À l’annonce du diagnostic, passe les scènes si tu vises le chrono.",
+            "Sors du cabinet et marche jusqu’à ce que la vision apparaisse ; suis ensuite le point de mission qui se révèle. Termine en moins de 3 min 5 s."
+          ],["Terminer en moins de 3 min 5 s"]],
+          ["That’s Murfree Country","Charles et Arthur cherchent un nouvel emplacement de camp et affrontent la bande des Murfree.",0,[
+            "Retrouve Dutch à Lakay, puis pars avec Charles. Choisis le cheval plutôt que le canoë : tu arriveras avec tes sacoches et l’itinéraire est plus direct.",
+            "Près du premier camp, accroupis-toi et laisse Charles t’indiquer les cibles. Élimine les guetteurs avec une arme silencieuse, puis avance jusqu’à la grotte.",
+            "À l’entrée, choisis l’approche discrète plutôt que la dynamite. Dans les tunnels, surveille la mini-carte : les Murfree chargent au corps-à-corps et peuvent te contourner.",
+            "Reste à couvert, vise les têtes et garde une précision d’au moins 85 %. Il faut quinze headshots au total et aucun objet de soin pendant la mission.",
+            "Une fois la grotte sécurisée, calme la captive, ouvre sa cage et fais-la monter sur ton cheval.",
+            "Pars aussitôt pour Annesburg et ramène Meredith à sa mère en moins de deux minutes. Ignore les détours et passe la scène d’arrivée si nécessaire."
+          ],["Ramener Meredith à sa mère en moins de 2 min","Faire 15 tirs en pleine tête","Atteindre 85 % de précision","Ne pas utiliser d’objet de soin"]]
         ]],
-        ["Chapitre 6 — Beaver Hollow","Le gang est divisé. Dernier chapitre avec Arthur : tout est à finir avant la dernière mission.",[
-          ["Icarus and Friends","En montgolfière, tu repères la prison de Sisika pour Sadie.",0,0,["Garder la montgolfière à la bonne altitude pendant tout le trajet", "5 headshots depuis la montgolfière", "Au moins 70 % de précision", "N’utiliser aucun objet de soin"]],
-          ["Visiting Hours","Avec Sadie, tu rames jusqu’à Sisika Island pour libérer John.",0,0,["Headshot les deux gardes depuis la tour", "Rejoindre le bateau en 2 min 45", "Terminer en 9 minutes", "Au moins 80 % de précision", "N’utiliser aucun objet de soin"]],
-          ["Just a Social Call","À Annesburg avec Dutch et Micah, tu t’apprêtes à confronter Cornwall.",0,0,["Headshot 3 ennemis à cheval", "Après la mort de Cornwall, rejoindre les chevaux en 2 min 45", "N’utiliser aucun objet de soin"]],
-          ["Do Not Seek Absolution (I)","★ Aide Archie Downes à la mine d’Annesburg.",1,0,["Terminer en 1 min 20"]],
-          ["Do Not Seek Absolution (II)","★ Retrouve la mère d’Archie à Willard’s Rest.",1,0,["Retrouver Edith Downes en 1 min 10"]],
-          ["Of Men and Angels","★ Donne de la nourriture ou un peu d’argent aux pauvres de Saint Denis.",1],
-          ["The Course of True Love (IV-V)","★ Aide Penelope et Beau à fuir leurs familles.",1,0,["Headshot 5 Braithwaite qui poursuivent le train", "Terminer en 7 min 30"]],
-          ["Money Lending and Other Sins (VI-VII)","★ Dernières dettes à récupérer pour Strauss.",1],
-          ["The Delights of Van Horn","Embuscade d’un convoi militaire transportant de la dynamite avec Bill.",0,0,["Headshot 5 soldats avec un fusil à lunette", "Au moins 85 % de précision"]],
-          ["The Bridge to Nowhere","Avec John, tu fais sauter le pont Bacchus pour perturber l’armée.",0,0,["Poser la dynamite en 1 min 35", "Échapper au train en 19 secondes"]],
-          ["A Rage Unleashed","Raid sur un bateau de l’armée pour récupérer les chevaux de la réserve de Wapiti.",0,0,["Assommer 2 soldats sur le bateau", "Rassembler les chevaux et rejoindre la rive en 1 min 30"]],
-          ["Archeology for Beginners","★ Rains Fall t’emmène sur un site sacré dans les Grizzlies de l’Est.",1,0,["Récupérer les reliques sans être détecté", "Les récupérer en 1 min 30"]],
-          ["Honor, Amongst Thieves","★ Vole un vaccin détourné par l’armée pour le capitaine Monroe.",1,0,["Récupérer le vaccin sans être détecté", "Terminer en 5 minutes"]],
-          ["The Fine Art of Conversation","Tu assistes à une réunion de trêve entre le colonel Favours et Rains Fall.",0,0,["Tuer le cheval d’un poursuivant pendant la fuite", "Terminer en 9 min 30", "Au moins 75 % de précision", "N’utiliser aucun objet de soin"]],
-          ["Goodbye, Dear Friend","À Saint Denis, tu assistes à la pendaison de Colm O’Driscoll avec Sadie et Dutch.",0,0,["Trouver les renforts de Colm en 45 secondes", "8 headshots avec un fusil à lunette", "Terminer en 6 min 30"]],
-          ["Mrs. Sadie Adler, Widow (I-II)","★ Avec Sadie, tu règles définitivement le compte des O’Driscoll à Hanging Dog Ranch.",1,0,["Headshot le tireur dans la grange", "Sécuriser la grange sans subir de dégâts", "Terminer en 5 min 30"]],
-          ["Favored Sons","Eagle Flies tend une embuscade à une patrouille pour détourner l’attention.",0,0,["Tuer le soldat au canon en 45 secondes", "35 headshots", "N’utiliser aucun objet de soin"]],
-          ["The King’s Son","Avec Charles, tu t’infiltres à Fort Wallace pour libérer Eagle Flies.",0,0,["Headshot chaque soldat qui te barre la route vers Eagle Flies", "Tuer 15 ennemis pendant la fuite en canoë", "Au moins 80 % de précision"]],
-          ["My Last Boy","Dernier assaut contre Cornwall Kerosene and Tar aux côtés d’Eagle Flies.",0,0,["Sauver Paytah", "30 headshots", "Au moins 80 % de précision", "N’utiliser aucun objet de soin"]],
-          ["Our Best Selves","Dernier gros coup : intercepter un train de l’armée près de Saint Denis.",0,0,["Headshot en Dead Eye après avoir sauté du cheval de Dutch", "Terminer en 11 minutes", "Au moins 80 % de précision dans le train", "N’utiliser aucun objet de soin"]],
-          ["Red Dead Redemption","Avec Sadie, tu pars secourir Abigail à Van Horn. Tu feras un choix décisif vers la fin : retourner aider John plutôt que partir avec l’argent est ce qui donne à l’histoire sa conclusion la plus forte. Fais une sauvegarde avant.",0,0,["7 headshots en couvrant Sadie depuis le phare", "Rejoindre Abigail et Sadie en 1 minute après la capture de Sadie", "Au moins 70 % de précision", "N’utiliser aucun objet de soin"]]
+        ["Chapitre 6 — Beaver Hollow","Dernier chapitre d’Arthur : les tensions du gang s’aggravent et plusieurs missions d’honneur peuvent disparaître si tu progresses trop loin. Les quêtes facultatives sont insérées près de leur période de déblocage.",[
+          ["Icarus and Friends","Sadie et Arthur utilisent une montgolfière pour observer la prison de Sisika avant de libérer John.",0,[
+            "Retrouve Sadie à Saint Denis, puis accompagne-la jusqu’à M. Bullard. Monte dans la nacelle et surveille la jauge d’altitude pendant tout le trajet : maintiens l’aiguille dans la zone jaune.",
+            "À l’approche de Sisika, sors les jumelles et cherche John près de la grange rouge. Dès que les gardes vous repèrent, quitte la zone indiquée sans perdre le contrôle du ballon.",
+            "Sur le chemin du retour, Sadie est poursuivie par des O’Driscoll à cheval. Avec le fusil de précision et le Sang-froid, fais cinq tirs à la tête depuis la nacelle.",
+            "Garde au moins 70 % de précision et ne consomme aucun objet de soin. Quand Bullard est touché, tiens le ballon à la bonne hauteur puis aide Sadie à remonter au signal."
+          ],["Garder le ballon à la bonne altitude pendant tout le trajet","Faire 5 tirs en pleine tête depuis la montgolfière","Atteindre 70 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["Visiting Hours","Avec Sadie, Arthur se rend à Sisika pour faire évader John.",0,[
+            "Rejoins Sadie près de la rivière et rame jusqu’à Sisika. Après le débarquement, suis-la jusqu’à la tour de garde et neutralise silencieusement le guetteur.",
+            "Prends les jumelles pour localiser John dans le champ. Depuis le mirador, élimine les deux gardiens d’un tir en pleine tête chacun ; le Sang-froid facilite les tirs à longue distance.",
+            "Descends et suis Sadie vers les cellules. Quand l’évasion tourne à la fusillade, utilise le prisonnier comme couverture selon les indications, puis avance jusqu’à la porte principale.",
+            "Une fois John libéré, fonce vers le bateau avec Sadie et lui en moins de 2 min 45 s. Ne t’arrête que pour abattre les gardes qui te barrent réellement le passage.",
+            "À l’extérieur, utilise les caisses et les bâtiments comme couverture avant la traversée. Vise juste pour rester au-dessus de 80 % de précision et n’utilise aucun objet de soin.",
+            "Rejoins le bateau en moins de neuf minutes au total ; passe les scènes et galope jusqu’au camp après la fuite."
+          ],["Tuer les deux gardiens d’un tir en pleine tête depuis le mirador","Rejoindre le bateau en moins de 2 min 45 s","Terminer en moins de 9 min","Atteindre 80 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["Just a Social Call","Arthur accompagne Dutch et Micah à Annesburg pour rencontrer Cornwall ; la négociation se transforme en fusillade.",0,[
+            "Retrouve Micah à Annesburg et suis-le jusqu’à Dutch et Cornwall. Quand Dutch abat le magnat, mets-toi en mouvement immédiatement : l’objectif de fuite démarre à cet instant.",
+            "Progresse vers les rails et le chariot minier en tirant seulement sur les ennemis qui bloquent la route. Tire sur le wagon-citerne demandé, puis libère les chevaux dès que l’interaction apparaît.",
+            "Rejoins les chevaux en moins de 2 min 45 s après la mort de Cornwall. Un fusil à pompe permet d’ouvrir le passage rapidement, mais ne reste pas derrière les couverts trop longtemps.",
+            "Pendant la poursuite à cheval, repère les cavaliers sur la mini-carte et place trois tirs à la tête avant que Dutch ou Micah ne les abattent.",
+            "N’utilise aucun objet de soin. Il n’y a pas de contrainte de précision, donc tire pour dégager le chemin tout en réservant les tirs précis aux cavaliers."
+          ],["Faire 3 tirs en pleine tête sur des ennemis montés","Après la mort de Cornwall, rejoindre les chevaux en moins de 2 min 45 s","Ne pas utiliser d’objet de soin"]],
+          ["Do Not Seek Absolution (I)","★ Avec un honneur élevé, Arthur aide Archie Downes, harcelé à la mine d’Annesburg. Mission facultative sans autre objectif que le chrono.",1,[
+            "Parle à Edith Downes à Annesburg lorsque l’icône apparaît, puis galope vers la mine pour retrouver Archie.",
+            "Passe la scène dès que tu reprends le contrôle et confronte le contremaître. Bloque ses coups, puis contre-attaque : faire tomber le contremaître met fin au combat.",
+            "Rejoins Archie et termine la mission en moins de 1 min 20 s. Cette branche exige un niveau d’honneur élevé ; ne la repousse pas jusqu’aux dernières missions."
+          ],["Terminer en moins de 1 min 20 s"]],
+          ["Do Not Seek Absolution (II)","★ Arthur part chercher Edith Downes à Willard’s Rest après avoir appris qu’elle a quitté Annesburg.",1,[
+            "Après la première partie et quelques jours en jeu, retrouve Archie à Annesburg. Cette suite demande également un honneur élevé.",
+            "Monte aussitôt à cheval et file vers Willard’s Rest. Dans la zone de recherche, active l’Œil de lynx pour repérer les traces d’Edith.",
+            "Interviens lorsqu’elle est en difficulté et convaincs-la de rentrer à Annesburg. Pour l’or, trouve-la en moins de 1 min 10 s après le départ.",
+            "Repars avec elle vers la ville pour conclure la mission ; saute les scènes pour ne pas perdre le temps de recherche."
+          ],["Trouver Edith Downes en moins de 1 min 10 s"]],
+          ["Of Men and Angels","★ Si Arthur a aidé sœur Calderón à Saint Denis, il peut lui apporter de quoi nourrir les pauvres. Pas de médaille d’or.",1,[
+            "Après A Fork in the Road, retrouve sœur Calderón devant l’église de Saint Denis, à condition d’avoir terminé Brothers and Sisters, One and All au chapitre 4.",
+            "Parle-lui une première fois pour lancer la scène, puis engage une seconde conversation et donne de la nourriture ou un peu d’argent.",
+            "La quête se termine aussitôt et augmente l’honneur ; aucun défi de médaille n’est associé à cette mission."
+          ]],
+          ["The Course of True Love (IV-V)","★ Penelope et Beau veulent quitter leurs familles rivales ; Arthur les aide à prendre le train.",1,[
+            "Lis la lettre de Penelope au camp, puis va la chercher et conduis-la jusqu’à la gare de Rhodes. Achète les billets avant que les familles ne les rattrapent.",
+            "Quand les cousins arrivent, éloigne le couple de la bagarre et monte dans le train. Les Braithwaite poursuivent ensuite le convoi.",
+            "Pendant la fusillade à bord, vise cinq poursuivants à la tête avant de rejoindre la locomotive et de conduire jusqu’à la prochaine gare.",
+            "Passe les scènes et les trajets inutiles pour terminer en moins de 7 min 30 s. Refuser le bijou à la fin améliore l’honneur, mais n’est pas nécessaire pour la médaille."
+          ],["Faire 5 tirs en pleine tête sur les Braithwaite qui poursuivent le train","Terminer en moins de 7 min 30 s"]],
+          ["Money Lending and Other Sins (VI-VII)","★ Strauss réclame deux dernières dettes, puis Arthur met fin à cette activité. La mission n’a pas de médaille d’or.",1,[
+            "Parle à Strauss à Beaver Hollow et commence par retrouver J. John Weathers à l’ouest du camp. Une fois l’échange terminé, défends-le contre les hommes qui l’attaquent.",
+            "Après l’incendie du chariot, tu peux abandonner sa dette ; cette décision et l’aide apportée à sa famille font gagner de l’honneur.",
+            "Rends-toi près d’Annesburg pour apprendre qu’Arthur Londonderry est mort. Va ensuite parler à sa veuve et renonce à réclamer l’argent ; tu peux également lui en donner.",
+            "Retourne au camp et confronte Strauss pour terminer la quête. Les choix honorables sont cohérents avec l’arc d’Arthur, mais aucun n’est requis pour une médaille."
+          ]],
+          ["The Delights of Van Horn","Avec Bill, Arthur intercepte un convoi militaire qui transporte de la dynamite.",0,[
+            "Retrouve Micah, puis pars avec Bill vers le point d’embuscade. Prends la position de tir en hauteur et équipe un fusil à lunette à longue portée.",
+            "Laisse Bill arrêter le convoi, puis élimine les soldats avec le fusil à lunette. Place cinq headshots et évite les tirs hasardeux pour conserver 85 % de précision.",
+            "Quand les survivants prennent la fuite, abat-les avant qu’ils ne s’éloignent. Rejoins ensuite Bill sur le chariot et conduis-le jusqu’au point indiqué."
+          ],["Faire 5 tirs en pleine tête avec un fusil à lunette","Terminer avec au moins 85 % de précision"]],
+          ["The Bridge to Nowhere","Avec John, Arthur pose des charges sur le pont Bacchus pour interrompre le transport de l’armée.",0,[
+            "Retrouve John à Bacchus Station et transporte les caisses de dynamite jusqu’à la partie centrale du pont.",
+            "Descends les charges une par une, puis prends les bâtons et place-les aux trois emplacements jaunes. Commence par le point le plus proche et termine par le plus éloigné pour réduire les allers-retours.",
+            "La pose complète doit être terminée en moins de 1 min 35 s. Cours entre les emplacements et valide chaque interaction sans t’arrêter.",
+            "Remonte ensuite l’échelle et prends le chariot manuel. À l’approche du train, appuie en cadence sur la commande indiquée pour accélérer.",
+            "Dépasse le train en moins de 19 s : un mauvais rythme ralentit le chariot, alors garde les pressions régulières jusqu’à la fin de la voie."
+          ],["Poser toute la dynamite en moins de 1 min 35 s","Échapper au train en moins de 19 s"]],
+          ["A Rage Unleashed","Arthur et le gang aident Eagle Flies à récupérer les chevaux de la réserve Wapiti sur un bateau de l’armée.",0,[
+            "Retrouve le révérend Swanson au camp, puis suis Eagle Flies jusqu’au canal. Rejoins le navire après la tombée de la nuit.",
+            "Sur le pont, approche-toi des soldats par-derrière sans arme à la main et assomme les deux premières sentinelles discrètement.",
+            "Élimine les gardes restants, puis pose la dynamite sur l’ancre quand Dutch te le demande. La manœuvre affole les chevaux et vous oblige à rejoindre la rive.",
+            "Cours vers l’un des chevaux marqués, monte-le et galope vers le rivage : les autres suivront. Le groupe doit toucher terre en moins de 1 min 30 s."
+          ],["Assommer 2 soldats sur le bateau","Rassembler les chevaux et atteindre la rive en moins de 1 min 30 s"]],
+          ["Archeology for Beginners","Rains Fall emmène Arthur sur un site sacré, puis lui demande de récupérer une relique volée par des soldats.",0,[
+            "Retrouve Rains Fall à Wapiti et accompagne-le dans les montagnes. Examine les indices autour du site brûlé avec l’Œil de lynx, puis repère le camp des soldats aux jumelles.",
+            "Dès que la recherche de la relique commence, monte à cheval et approche le camp par le sud-est, pas par la route principale.",
+            "Entre accroupi dans le camp, contourne les soldats et récupère le chanupa dans la tente centrale. Ne déclenche pas d’alerte et ressors par le même côté.",
+            "Tu as 1 min 30 s pour prendre la relique sans être repéré. Remonte à cheval et rapporte-la à Rains Fall pour conclure la mission."
+          ],["Récupérer la relique sans être repéré","Récupérer la relique en moins de 1 min 30 s"]],
+          ["Honor, Amongst Thieves","Le capitaine Monroe veut récupérer un vaccin détourné par l’armée pour la réserve Wapiti.",0,[
+            "Parle à Monroe au camp, puis suis-le jusqu’au point d’observation. Passe la scène et descends la pente pour rejoindre le chariot par l’arrière.",
+            "Saute sur le chariot quand il ralentit, accroupis-toi dans la cargaison et fouille les caisses pour trouver le vaccin.",
+            "Ne menace pas le conducteur et ne tire sur personne : quitte le chariot sans être détecté, puis rejoins ton cheval.",
+            "Rapporte le vaccin à Wapiti en moins de cinq minutes. Passe les scènes et garde une trajectoire directe."
+          ],["Récupérer le vaccin sans être repéré","Terminer en moins de 5 min"]],
+          ["The Fine Art of Conversation","Arthur accompagne Charles et Rains Fall à une réunion avec le colonel Favours et le capitaine Monroe.",0,[
+            "Retrouve Trelawny si son icône est disponible, puis rejoins Charles et Rains Fall. Suis-les au lieu de négociation et attends dans la tente indiquée.",
+            "Quand Arthur comprend que Monroe est en danger, prends-le en otage et pars à cheval avec lui. Abats un cheval de poursuivant pendant la fuite.",
+            "À l’arrêt forcé, protège Monroe contre les vagues d’ennemis. Vise soigneusement et maintiens 75 % de précision ; ne consomme aucun objet de soin.",
+            "Une fois Monroe hissé sur ton cheval, conduis-le jusqu’au train en éliminant les poursuivants qui s’approchent.",
+            "Passe les scènes et termine en moins de 9 min 30 s. Les objets qui restaurent uniquement le Sang-froid ne comptent pas comme soin de santé."
+          ],["Tuer le cheval d’un poursuivant pendant la fuite","Terminer en moins de 9 min 30 s","Atteindre 75 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["Goodbye, Dear Friend","Sadie, Dutch et Arthur assistent à la pendaison de Colm O’Driscoll à Saint Denis.",0,[
+            "Retrouve Dutch et Sadie, puis suis-les jusqu’à la place de la pendaison. Lorsque les O’Driscoll tentent d’intervenir, suis Dutch vers les renforts.",
+            "Pour trouver leur tireur, dépasse la fontaine, passe sous l’arche, prends l’escalier de gauche et grimpe sur le balcon puis l’échelle. Fais-le en moins de 45 s.",
+            "Récupère le fusil à lunette et couvre la rue depuis le toit. Obtiens huit tirs à la tête avec cette arme avant que Sadie et Dutch n’éliminent tous les ennemis.",
+            "Passe les scènes et termine la mission en moins de 6 min 30 s."
+          ],["Trouver les renforts de Colm en moins de 45 s","Faire 8 tirs en pleine tête avec un fusil à lunette","Terminer en moins de 6 min 30 s"]],
+          ["Mrs. Sadie Adler, Widow (I-II)","★ Arthur accompagne Sadie à Hanging Dog Ranch pour mettre fin à la traque des O’Driscoll. La médaille porte surtout sur la seconde partie.",1,[
+            "Parle à Sadie à Beaver Hollow et pars avec elle, ce qui évite un trajet séparé. À Hanging Dog Ranch, avance avec elle et élimine les O’Driscoll sans perdre de temps.",
+            "Repère le tireur qui prend position sur le toit de la grange et élimine-le d’un headshot au fusil à lunette.",
+            "Quand Arthur entre dans la grange, inspecte les recoins avant de courir au centre. Abats les ennemis qui s’y cachent sans subir le moindre dégât pendant que tu la sécurises.",
+            "Rejoins Sadie dans la maison après avoir vidé la grange. Passe les scènes et termine l’ensemble en moins de 5 min 30 s."
+          ],["Faire un headshot sur le tireur dans la grange","Sécuriser la grange sans subir de dégâts","Terminer en moins de 5 min 30 s"]],
+          ["Favored Sons","Eagle Flies et Dutch tendent une embuscade à une patrouille pour détourner l’attention de la réserve.",0,[
+            "Suis Dutch et pose les explosifs aux emplacements signalés. Place-toi derrière le couvert, puis déclenche la charge quand il donne le signal.",
+            "Pendant la première fusillade, vise les soldats à la tête et profite des ennemis qui battent en retraite pour compléter les 35 headshots.",
+            "Quand les renforts arrivent avec un canon, cours vers l’artilleur et élimine-le dans les 45 secondes. Ne t’attarde pas à fouiller les corps.",
+            "Progresse ensuite avec Dutch et utilise les rochers comme abris pendant la retraite. N’utilise aucun objet de soin ; restaure seulement le Sang-froid si nécessaire."
+          ],["Tuer l’artilleur en moins de 45 s","Faire 35 tirs en pleine tête","Ne pas utiliser d’objet de soin"]],
+          ["The King’s Son","Arthur et Charles s’infiltrent dans Fort Wallace pour libérer Eagle Flies.",0,[
+            "Retrouve Charles à Wapiti et suis-le jusqu’au fort. Avance discrètement et neutralise les premières patrouilles avec l’arc ou des couteaux de lancer.",
+            "Pendant l’infiltration, élimine chaque soldat qui bloque le chemin vers Eagle Flies d’un tir en pleine tête. Quand deux ennemis arrivent ensemble, marque-les tous les deux au Sang-froid pour éviter que Charles ne tire avant toi.",
+            "Escalade les murs avec le grappin lorsque Charles le demande et continue de dégager le chemin. À l’intérieur, utilise la diversion de la lanterne puis récupère la clé du gardien près de la cellule.",
+            "Libère Eagle Flies, fais sauter l’ouverture indiquée et couvre la retraite jusqu’aux canoës. Pendant la fuite sur l’eau, élimine quinze soldats.",
+            "Utilise le Sang-froid pendant la séquence en canoë pour garder au moins 80 % de précision, puis suis Charles jusqu’au terme de l’évasion."
+          ],["Faire un headshot sur chaque soldat bloquant le chemin vers Eagle Flies","Tuer 15 ennemis pendant la fuite en canoë","Atteindre 80 % de précision"]],
+          ["My Last Boy","Arthur rejoint l’assaut d’Eagle Flies contre Cornwall Kerosene & Tar et tente de sauver Paytah.",0,[
+            "Pars avec le groupe vers les champs pétrolifères. Quand les combats commencent, passe devant les alliés sans te mettre à découvert et commence aussitôt à viser les têtes.",
+            "Progresse de couvert en couvert jusqu’aux voies ferrées. Après l’arrivée du train armé, traverse les wagons et regarde à gauche près du chariot pour libérer Paytah.",
+            "Continue jusqu’à l’usine et élimine les soldats avant de monter au bureau avec Dutch. Il faut trente headshots et au moins 80 % de précision : utilise le Sang-froid pour les longues lignes de tir.",
+            "Évite tous les objets de soin. Les toniques de Sang-froid restent utiles s’ils ne restaurent pas ta santé.",
+            "À la sortie, Dutch t’abandonne mais Eagle Flies revient. En Sang-froid, vise le colonel Favours, puis charge Eagle Flies sur ton cheval.",
+            "Ramène-le à Wapiti sans te détourner. La sauvegarde de Paytah est indispensable pour l’or."
+          ],["Sauver Paytah","Faire 30 tirs en pleine tête","Atteindre 80 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["Our Best Selves","Le gang intercepte un train transportant la paie de l’armée pour financer sa fuite.",0,[
+            "Passe la scène d’ouverture et accompagne John récupérer la dynamite. Rejoins ensuite le groupe à Saint Denis et chevauche près du train jusqu’au signal du saut.",
+            "Monte à bord et avance wagon après wagon. Mets-toi à couvert et tire seulement quand une cible est visible afin de conserver 80 % de précision dans le train.",
+            "Quand Arthur tombe près du cheval de Dutch, remonte sur la monture puis saute à nouveau sur le convoi. Passe en Sang-froid et fais un headshot sur l’ennemi qui vient de toucher John.",
+            "Après cette séquence, manie la Gatling pour repousser les hommes qui arrivent. Le test de précision du train est alors déjà validé.",
+            "Pose la dynamite sur le coffre blindé au signal, fais-la exploser et récupère l’argent. Termine en moins de 11 min sans utiliser d’objet de soin.",
+            "Si tu prends des dégâts, cherche le couvert plutôt qu’un tonique de santé : tout objet de soin annule la médaille."
+          ],["Faire un headshot en Sang-froid après avoir sauté du cheval de Dutch","Terminer en moins de 11 min","Finir la fusillade dans le train avec au moins 80 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["Red Dead Redemption","Sadie et Arthur partent délivrer Abigail à Van Horn ; la décision finale influe sur la conclusion d’Arthur.",0,[
+            "Avant d’atteindre Van Horn, équipe les armes de poing que tu veux garder pour la suite. Grimpe au phare avec Sadie et prends le fusil de précision.",
+            "Depuis le phare, couvre Sadie pendant qu’elle avance vers le bâtiment. Utilise le Sang-froid sur les cibles éloignées et réussis sept tirs à la tête avant qu’elle atteigne Abigail.",
+            "Quand Sadie est capturée, saute la scène et cours directement vers le bâtiment du quai : tu as une minute pour rejoindre Abigail et Sadie. N’abats que les ennemis qui bloquent le passage.",
+            "Entre et élimine les deux Pinkerton à bout portant en Sang-froid. Après la révélation sur Micah, sors du bâtiment et protège la fuite à cheval.",
+            "Garde au moins 70 % de précision sur toute la mission et n’utilise aucun objet de soin. Reste à couvert pendant les combats plutôt que de prendre un tonique.",
+            "De retour au camp, les événements conduisent Arthur à affronter Dutch et Micah. Le choix de retourner aider John ou de repartir vers l’argent, ainsi que l’honneur, détermine la variante de la fin.",
+            "Pour la médaille, les objectifs se jouent principalement avant et pendant le sauvetage d’Abigail ; ensuite, continue la mission et fais ton choix final."
+          ],["Faire 7 tirs en pleine tête en couvrant Sadie depuis le phare","Après la capture de Sadie, rejoindre Abigail et Sadie en moins d’une minute","Atteindre 70 % de précision","Ne pas utiliser d’objet de soin"]]
         ]],
-        ["Épilogue, partie 1 — Pronghorn Ranch","Des années plus tard, tu joues John Marston. Blackwater et le Nouveau-Austin sont accessibles.",[
-          ["The Wheel","John, Abigail et Jack cherchent du travail à Strawberry.",0,0,["Atteindre Pronghorn Ranch sans faire tomber de provisions", "Récupérer le chariot en 1 minute"]],
-          ["Simple Pleasures","John se fait engager à Pronghorn Ranch sous un faux nom.",0,0,["Remplir un seau en 10 secondes en trayant", "Terminer en 5 min 15"]],
-          ["Farming, for Beginners","Journée de travail : clôture et bétail.",0,0,["Réparer la première section de clôture en 1 min 30", "Éviter le taureau"]],
-          ["Fatherhood, for Beginners","John accepte plus de tâches à la ferme pendant que les autres sont occupés.",0,0,["Fatiguer Jeremiah en 45 secondes", "Lui donner une friandise", "Apprendre à Jack à monter sans être désarçonné", "Gagner la course jusqu’à Pronghorn Ranch"]],
-          ["Old Habits","Des hommes de main sèment la pagaille au ranch.",0,0,["Battre les Laramie sans prendre un coup", "Les battre en 25 secondes"]],
-          ["Jim Milton Rides, Again?","Après les remerciements de Geddes, un raid nocturne surprend le ranch.",0,0,["10 kills en tenant deux armes de poing", "15 headshots", "N’utiliser aucun objet de soin"]],
-          ["Fatherhood, for Idiots","Tu emmènes Jack à Strawberry chercher du courrier et un colis.",0,0,["Tuer les 3 ennemis en Dead Eye", "Retourner au ranch en 1 min 30 après la confrontation"]],
-          ["Motherhood","John reçoit un télégramme de Sadie.",0,0,["Terminer en 1 min 30"]],
-          ["Gainful Employment","Tu rejoins Sadie à Valentine pour une chasse à la prime.",0,0,["Repérer le fugitif en 30 secondes après l’arrivée à Strawberry", "Le rattraper et le ligoter en 1 min 15 après être monté à cheval"]],
-          ["The Landowning Classes / Home of the Gentry?","Avant d’acheter Beecher’s Hope, tu inspectes les terres et chasses les squatteurs.",0,0,["Terminer en 2 min 30"]]
+        ["Épilogue, partie 1 — Pronghorn Ranch","Plusieurs années plus tard, tu incarnes John Marston. Il cherche un travail honnête et un foyer pour Abigail et Jack.",[
+          ["The Wheel","John et sa famille arrivent à Strawberry ; une livraison les conduit au ranch Pronghorn.",0,[
+            "Conduis le chariot jusqu’au magasin général de Strawberry et demande du travail. Après avoir accepté la livraison, retrouve Abigail et Jack près du cabinet médical.",
+            "Retourne au magasin, prends le chariot chargé et suis la route vers Pronghorn Ranch. Il n’y a pas de limite de temps : ralentis dans les virages et évite les rochers pour ne perdre aucune caisse.",
+            "Après le contrôle des provisions, des bandits s’emparent du chariot. Dès que tu reprends la main, monte sur le cheval à proximité et rattrape-les.",
+            "Saute sur le chariot en moins d’une minute, chasse les voleurs et ramène-le au ranch."
+          ],["Atteindre Pronghorn sans laisser tomber de provisions","Récupérer le chariot en moins d’une minute"]],
+          ["Simple Pleasures","Sous le nom de Jim Milton, John apprend les tâches quotidiennes du ranch.",0,[
+            "Parle à Tom Dickens et suis Abe à travers le ranch. Fais une halte à la maison pour accueillir Abigail et Jack, puis rejoins Abe aux étables.",
+            "Pendant la traite, alterne les commandes gauche et droite au rythme des indications. Remplis un seau en moins de dix secondes ; tu as plusieurs essais.",
+            "Prends la fourche et déplace le fumier dans la brouette jusqu’à ce que l’étable soit propre, puis repose l’outil à l’emplacement marqué.",
+            "Retourne à la maison en courant dès que l’objectif apparaît. Passe les scènes et termine l’ensemble en moins de 5 min 15 s."
+          ],["Remplir un seau en moins de 10 s pendant la traite","Terminer en moins de 5 min 15 s"]],
+          ["Farming, for Beginners","John répare une clôture et apprend à maîtriser un taureau récalcitrant.",0,[
+            "Retrouve Tom Dickens et suis-le jusqu’à la clôture. Plante le premier poteau, sélectionne une traverse et règle sa hauteur avant de la fixer.",
+            "Répète les gestes avec les éléments suivants sans hésiter : la première section doit être réparée dans les 1 min 30 s.",
+            "Lorsque le taureau s’échappe, poursuis-le en gardant de l’espace. Lance le lasso quand il s’arrête, puis esquive ses charges en te décalant.",
+            "Une fois qu’il est attaché, approche lentement et calme-le jusqu’à pouvoir le mener. Ne te laisse pas percuter une seule fois."
+          ],["Réparer la première section de clôture en 1 min 30 s","Ne pas être touché par le taureau"]],
+          ["Fatherhood, for Beginners","John s’occupe de Jeremiah, du poulain et de Jack pendant une journée chargée au ranch.",0,[
+            "Retrouve Duncan Geddes et approche-toi de Jeremiah. Calme-le en le visant et en le caressant jusqu’à ce qu’il se laisse monter.",
+            "Pour le fatiguer en moins de 45 s, galope et franchis plusieurs clôtures jusqu’à épuiser son endurance. Une fois apaisé, ouvre la roue d’objets et donne-lui une friandise.",
+            "Aide Mme Geddes avec la jument en suivant les commandes affichées, puis rentre à la maison et accompagne Jack pour sa leçon d’équitation.",
+            "Pendant que Jack s’entraîne, garde-le à proximité et ne lui demande pas d’aller plus vite qu’au petit galop : son poney ne doit pas le désarçonner.",
+            "Au ruisseau, accepte la course et pars immédiatement. Galope tout droit vers le ranch ; gagne la course pour valider le dernier objectif d’or."
+          ],["Fatiguer Jeremiah en moins de 45 s","Donner une friandise à Jeremiah","Apprendre à Jack à monter sans qu’il soit désarçonné","Gagner la course jusqu’à Pronghorn Ranch"]],
+          ["Old Habits","Des hommes de la bande de Laramie s’en prennent aux ouvriers de Pronghorn ; John les affronte à mains nues.",0,[
+            "Quand tu entends des coups de feu, rejoins les ouvriers près du ranch et confronte le Laramie qui les menace.",
+            "Garde les poings levés, bloque son attaque puis contre avec quelques coups. Quand il tombe, termine le combat avant qu’il ne se relève.",
+            "Le duel doit durer moins de 25 s et tu ne dois pas recevoir de coup. Ne martèle pas l’attaque sans bloquer : les contres sont plus sûrs."
+          ],["Battre le Laramie sans recevoir de coup","Le battre en moins de 25 s"]],
+          ["Jim Milton Rides, Again?","Une attaque nocturne ramène John aux armes pour défendre le ranch et poursuivre les voleurs de bétail.",0,[
+            "Après le réveil, cours jusqu’à l’endroit indiqué pour récupérer une arme. Défends les ouvriers et rejoins Dickens en restant près des couverts du ranch.",
+            "Pendant le combat à mains nues contre les deux hommes, bloque et contre : aucun objet de soin ne doit être utilisé dans toute la mission.",
+            "Quand Geddes te rend tes armes, équipe deux armes de poing et utilise-les ensemble pour obtenir dix éliminations. Fais également quinze tirs à la tête.",
+            "Garde les fusils dans la roue si tu veux, mais n’utilise pas d’arme longue pour conserver les dix éliminations en double maniement. Le Sang-froid facilite les headshots.",
+            "Une fois la ferme sécurisée, rejoins le repaire des voleurs et élimine la dernière vague avant de terminer."
+          ],["Faire 10 éliminations avec deux armes de poing","Faire 15 tirs en pleine tête","Ne pas utiliser d’objet de soin"]],
+          ["Fatherhood, for Idiots","John emmène Jack à Strawberry pour récupérer du courrier, puis doit le ramener au ranch.",0,[
+            "Parle à Abigail et prends les rênes du chariot. Suis la route de Strawberry avec Jack, récupère le courrier au bureau de poste et remonte dans le véhicule.",
+            "Sur le chemin du retour, arrête-toi à la demande de John. Lorsque les trois hommes l’interpellent, passe immédiatement en Sang-froid.",
+            "Abats les trois ennemis pendant une seule séquence de Sang-froid, puis passe la scène qui suit pour lancer le retour.",
+            "Conduis au plus court vers Pronghorn Ranch et rentre en moins de 1 min 30 s après la confrontation."
+          ],["Tuer les trois ennemis en Sang-froid","Retourner au ranch en moins de 1 min 30 s après la confrontation"]],
+          ["Motherhood","John reçoit un télégramme de Sadie tandis que sa famille a quitté le ranch.",0,[
+            "Après le télégramme d’Abe, cours jusqu’à la maison et lis le message de Sadie. Passe les scènes dès que le jeu le permet.",
+            "Suis les marqueurs d’activité qui apparaissent au ranch, puis retourne parler à David Geddes lorsque le jeu te le demande.",
+            "Le chrono de 1 min 30 s est serré : ne t’attarde pas à cheval ni dans les dialogues et utilise le trajet direct entre les objectifs."
+          ],["Terminer en moins de 1 min 30 s"]],
+          ["Gainful Employment","Sadie recrute John pour retrouver le chasseur de primes Nathan Kirk, caché à Strawberry.",0,[
+            "Retrouve Sadie au saloon de Valentine et chevauche avec elle jusqu’à Strawberry. Dès l’arrivée, ignore les détours et entre au Welcome Center.",
+            "Monte directement à la chambre 3 : il faut repérer Kirk dans les 30 s après l’arrivée en ville.",
+            "Quand il s’enfuit, monte sur ton cheval et poursuis-le au lasso. Rattrape-le et ligote-le en moins de 1 min 15 s après être monté à cheval.",
+            "Maintiens la visée du lasso et active le Sang-froid si nécessaire ; une fois Kirk ligoté, place-le sur la monture de Sadie."
+          ],["Repérer le fugitif dans les 30 s après l’arrivée à Strawberry","Le rattraper et le ligoter en moins de 1 min 15 s après être monté à cheval"]],
+          ["The Landowning Classes","John demande un prêt à Blackwater pour acheter Beecher’s Hope. Cette étape n’a pas de médaille d’or.",0,[
+            "Rends-toi à la banque de Blackwater et rencontre Ansel Atherton pour présenter la demande de prêt.",
+            "Après l’entretien, écoute les conditions de l’achat et récupère les papiers nécessaires. La mission prépare la visite du terrain dans la suivante.",
+            "Il n’y a pas de défi de médaille pour cette courte étape."
+          ]],
+          ["Home of the Gentry?","Avant de conclure l’achat de Beecher’s Hope, John doit faire partir les squatteurs et retourner signer les papiers.",0,[
+            "Après The Landowning Classes, galope de Blackwater jusqu’au terrain indiqué à Beecher’s Hope.",
+            "Parle aux occupants. Pour gagner du temps, propose les 10 dollars demandés ; la menace ou la fusillade fonctionne aussi, mais peut rallonger la mission.",
+            "Retourne à Blackwater et signe les documents à la banque. Termine en moins de 2 min 30 s, en coupant les scènes et en gardant une allure soutenue.",
+            "À la sortie, retrouve l’Oncle : l’histoire continue avec la construction de la ferme."
+          ],["Terminer en moins de 2 min 30 s"]]
         ]],
-        ["Épilogue, partie 2 — Beecher’s Hope","John construit sa vie de fermier. Ta cible finale : Micah.",[
-          ["Bare Knuckle Friendships","Avec Uncle, tu pars à Saint Denis pour retrouver Charles.",0,0,["Retrouver Charles en 1 min 50 après l’arrivée à Saint Denis", "Tuer tous les hommes de Guido Martelli en 10 secondes"]],
-          ["Home Improvement for Beginners","Tu démolis la cabane en ruine avec Uncle et Charles.",0,0,["Terminer en 18 secondes"]],
-          ["An Honest Day’s Labors","À Blackwater, tu aides Sadie à récupérer un criminel recherché.",0,0,["Tuer tous les hommes de Langton pendant la fuite à cheval", "Partir avec Shane Finley en moins de 5 minutes après avoir choisi ton approche", "Au moins 70 % de précision", "N’utiliser aucun objet de soin"]],
-          ["The Tool Box","Tu achètes une maison préfabriquée et la fais livrer en évitant les frères Skinner.",0,0,["Headshot tous les frères Skinner cachés dans les arbres", "Trouver M. Wayne en 2 min 15", "N’utiliser que des armes de poing", "N’utiliser aucun objet de soin"]],
-          ["A New Jerusalem","Montage de la maison avec Charles et Uncle.",0,0,["Planter les clous avec 80 % de précision", "Terminer en 3 min 35"]],
-          ["A Quick Favor for an Old Friend","Chasse à la prime avec Sadie pour rembourser tes dettes.",0,0,["Faire fuir les hommes de Cortez de Rhodes en 30 secondes", "5 headshots avec un fusil à lunette en couvrant Sadie", "4 kills au tir à la hanche", "N’utiliser aucun objet de soin"]],
-          ["Uncle’s Bad Day","Uncle est enlevé par les Skinner après la fête de la grange.",0,0,["5 headshots à l’arc", "Rentrer à Beecher’s Hope en 3 min 10 après avoir libéré Uncle", "Au moins 80 % de précision", "N’utiliser aucun objet de soin"]],
-          ["Trying Again","Pêche avec Jack et le chien Rufus.",0,0,["Attraper un poisson", "Terminer en 5 min 20"]],
-          ["A Really Big Bastard","Tu pars avec Sadie traquer un criminel dans Tall Trees.",0,0,["Toucher l’ours 4 fois pendant sa charge", "Headshot les deux chasseurs de primes rivaux en Dead Eye", "Terminer en 7 min 15"]],
-          ["A New Future Imagined","Sortie à Blackwater avec Abigail pour une question importante.",0,0,["Terminer en 7 min 30"]],
-          ["American Venom","Avec Sadie et Charles, tu interroges Cleet à Strawberry pour retrouver Micah : le duel final.",0,0,["Aider Sadie à attraper Cleet en 35 secondes", "Headshot le tireur qui touche Charles", "Au moins 85 % de précision", "N’utiliser aucun objet de soin"]]
+        ["Épilogue, partie 2 — Beecher’s Hope","John construit son ranch et règle ses comptes avec Micah. Les activités facultatives de cette partie se débloquent parfois en parallèle.",[
+          ["Bare Knuckle Friendships","Avec l’Oncle, John part à Saint Denis retrouver Charles, qui gagne sa vie dans des combats truqués.",0,[
+            "Pars avec l’Oncle pour Saint Denis et garde ton cheval près de toi. À l’arrivée, monte aussitôt et rejoins le saloon indiqué sans attendre le groupe.",
+            "Demande où trouver Charles, puis rends-toi vers l’arène au nord de la ville. Cherche-le parmi les combattants et parle-lui pour suivre son dernier combat.",
+            "Quand les hommes de Guido Martelli s’en prennent à Charles, active le Sang-froid dès que John peut bouger et neutralise toute la bande en dix secondes.",
+            "Rejoins l’Oncle et Charles puis repars pour Beecher’s Hope. Le premier repérage doit être fait en moins de 1 min 50 s après l’arrivée en ville."
+          ],["Trouver Charles en moins de 1 min 50 s après l’arrivée à Saint Denis","Tuer tous les hommes de Guido Martelli en moins de 10 s"]],
+          ["Home Improvement for Beginners","John, l’Oncle et Charles abattent la vieille cabane pour commencer la construction du ranch.",0,[
+            "Passe la scène d’ouverture dès que le jeu rend la main à John.",
+            "Maintiens la commande de recul et martèle la touche d’action pour démonter la cabane sans interruption.",
+            "Termine toute la démolition en moins de 18 s."
+          ],["Terminer en moins de 18 s"]],
+          ["An Honest Day’s Labors","À Pike’s Basin, John aide Sadie à reprendre le fugitif Shane Finley au rival James Langton.",0,[
+            "Retrouve Sadie à Blackwater et suis-la jusqu’à Hennigan’s Stead, puis jusqu’au canyon. Quand elle te demande l’approche, choisis d’attaquer directement pour gagner du temps.",
+            "Avance dans le ravin en neutralisant les tireurs, surtout ceux postés en hauteur. Dégage le passage jusqu’à Shane et garde au moins 70 % de précision.",
+            "Après avoir récupéré le prisonnier, élimine les ennemis restants sans utiliser d’objet de soin. Le délai de cinq minutes commence dès que tu as choisi l’approche.",
+            "Lors de la fuite à cheval, tue tous les hommes de Langton qui vous poursuivent. Repère chaque cavalier sur la mini-carte avant qu’il ne s’éloigne.",
+            "Ramène Shane à Blackwater et dépose-le dans la cellule indiquée pour terminer."
+          ],["Tuer tous les hommes de Langton pendant la fuite à cheval","S’échapper avec Shane en moins de 5 min après le choix d’approche","Terminer avec au moins 70 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["The Tool Box","John et Charles vont chercher les outils de construction ; les frères Skinner attaquent leur convoi.",0,[
+            "Parle à Albert Cakes à Blackwater et accompagne Charles pour récupérer les matériaux et le chariot. Arrête-toi ensuite à Manzanita Post pour prendre les outils.",
+            "Au retour, équipe seulement des revolvers ou pistolets et ne consomme aucun objet de soin. Utilise les arbres comme couvert contre la première vague des Skinner.",
+            "Après la seconde attaque, passe immédiatement la scène et cours vers la zone où les ravisseurs ont emmené M. Wayne.",
+            "Dans les arbres, repère chaque Skinner embusqué et fais un headshot à chacun, idéalement en Sang-froid. Il faut trouver M. Wayne dans les 2 min 15 s.",
+            "Récupère la boîte à outils et le matériel près du corps, puis retourne au chariot et rentre à Beecher’s Hope."
+          ],["Faire un headshot à tous les Skinner cachés dans les arbres","Trouver M. Wayne en moins de 2 min 15 s","N’utiliser que des armes de poing","Ne pas utiliser d’objet de soin"]],
+          ["A New Jerusalem","John assemble la maison préfabriquée avec Charles tandis que l’Oncle supervise les travaux.",0,[
+            "Passe la scène d’ouverture, puis suis les commandes affichées pour lever et mettre en place les poutres.",
+            "Pendant la séquence du marteau, appuie sur la touche au rythme de chaque coup plutôt qu’en rafale : les clous doivent être plantés avec 80 % de précision.",
+            "Enchaîne chaque mini-jeu sans attendre les animations complètes et termine la construction en moins de 3 min 35 s."
+          ],["Planter les clous avec 80 % de précision","Terminer en moins de 3 min 35 s"]],
+          ["A Quick Favor for an Old Friend","Pour payer les matériaux, John aide Sadie à capturer Ramón Cortez et à le ramener à Rhodes.",0,[
+            "Rejoins Sadie à Blackwater, puis suis-la jusqu’à la grange où Cortez est caché. Maîtrise-le et place-le sur le cheval avant de partir vers Rhodes.",
+            "Quand les hommes de Cortez attaquent devant le bureau du shérif, fais-les fuir en moins de 30 s. Tire au jugé sur quatre ennemis sans épauler ton arme.",
+            "Après l’explosion et la fuite du prisonnier, suis Sadie jusqu’au ruisseau. Depuis le toit, couvre-la avec un fusil à lunette à longue portée et fais cinq headshots.",
+            "Descends quand Sadie t’appelle et termine les ennemis restants, toujours sans objet de soin. Les quatre tirs au jugé peuvent aussi être complétés pendant cette seconde fusillade.",
+            "Poursuis Cortez lorsqu’il tente de s’échapper en barque, vise-le pour le forcer à rebrousser chemin et élimine ses hommes avant le retour à Rhodes."
+          ],["Faire fuir les hommes de Cortez de Rhodes en moins de 30 s","Faire 5 tirs en pleine tête au fusil à lunette en couvrant Sadie","Tuer 4 ennemis au tir à la hanche","Ne pas utiliser d’objet de soin"]],
+          ["Uncle’s Bad Day","Les Skinner enlèvent l’Oncle après la fête de la grange ; John et Charles partent le secourir dans Tall Trees.",0,[
+            "Après la scène de fête, suis Charles vers Tall Trees et laisse ton cheval au point prévu. Avance accroupi derrière lui et utilise l’arc pour les premiers ennemis.",
+            "Fais cinq tirs à la tête à l’arc avant le combat ouvert. Utilise ensuite le Sang-froid pour garder 80 % de précision et évite tout objet de soin.",
+            "Après avoir repéré l’Oncle dans le camp, neutralise les Skinner autour de lui et libère-le.",
+            "Le chrono de retour démarre quand l’Oncle est libéré. Couvre Charles pendant qu’il le porte jusqu’aux chevaux, puis monte et rentre à Beecher’s Hope en moins de 3 min 10 s.",
+            "Élimine les derniers poursuivants seulement s’ils bloquent le chemin : chaque tir manqué réduit la précision."
+          ],["Faire 5 tirs en pleine tête avec l’arc","Retourner à Beecher’s Hope en moins de 3 min 10 s après la libération","Atteindre 80 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["The Best of Women","John retrouve Abigail et Jack après le retour de sa famille à Beecher’s Hope. Cette courte transition n’a pas de médaille d’or.",0,[
+            "La scène démarre automatiquement après Uncle’s Bad Day. Laisse-la se dérouler pour retrouver Abigail et Jack ; aucune action ni objectif de médaille ne sont à réaliser."
+          ]],
+          ["Trying Again","John emmène Jack pêcher avec Rufus ; la sortie est interrompue quand le chien se fait mordre par un serpent.",0,[
+            "Retrouve Jack à Beecher’s Hope et marche avec lui jusqu’à la rivière. Il n’est pas possible de sprinter pendant ce trajet, alors suis le chemin direct.",
+            "Sors la canne à pêche et attrape au moins un poisson de façon normale : ne tire pas sur les poissons et n’utilise pas d’explosifs.",
+            "Quand Jack s’éloigne, range la canne et suis-le vers le marqueur. Rufus a été mordu : exécute le geste de succion du venin indiqué à l’écran.",
+            "Ramène le chien avec Jack pour conclure et passe les scènes afin de finir en moins de 5 min 20 s."
+          ],["Pêcher un poisson","Terminer en moins de 5 min 20 s"]],
+          ["A Really Big Bastard","Avec Sadie, John traque un fugitif dans Tall Trees et tombe sur un ours gigantesque.",0,[
+            "Rejoins Sadie à Beecher’s Hope, puis suis-la vers Tall Trees. Repère les traces du fugitif avec l’Œil de lynx et garde le cheval près de toi.",
+            "À la cabane, passe la scène et prépare-toi à la charge de l’ours. Le Sang-froid se déclenche : touche-le quatre fois avant qu’il n’arrive au contact.",
+            "Brise la prise quand le jeu l’indique, puis tire encore si l’ours revient. Quand il s’enfuit, reprends la piste du fugitif et conduis-le à Blackwater.",
+            "À l’approche de la ville, deux chasseurs de primes rivaux surgissent. Active le Sang-froid et fais un headshot à chacun.",
+            "Retourne à Blackwater avec Sadie et le prisonnier. Passe les scènes et termine en moins de 7 min 15 s."
+          ],["Toucher l’ours 4 fois pendant sa charge","Faire un headshot en Sang-froid aux deux chasseurs de primes rivaux","Terminer en moins de 7 min 15 s"]],
+          ["A New Future Imagined","John emmène Abigail à Blackwater pour lui demander de l’épouser.",0,[
+            "Conduis le chariot à Blackwater avec Abigail et arrête-toi devant le studio photo. À l’intérieur, choisis rapidement le premier décor puis la première pose.",
+            "Après la photo, achète le billet de cinéma et assiste à la séance ; le jeu permet de la quitter sans attendre la fin.",
+            "Rejoins ensuite la rive au sud-est et rame jusqu’au point indiqué. Présente la bague à Abigail pendant la promenade en barque.",
+            "Passe les scènes de la demande et termine l’ensemble en moins de 7 min 30 s."
+          ],["Terminer en moins de 7 min 30 s"]],
+          ["American Venom","Avec Sadie et Charles, John remonte la piste de Micah jusqu’au mont Hagen.",0,[
+            "Retrouve Sadie et Charles à Beecher’s Hope, puis pars pour Strawberry. Dès que Cleet s’enfuit, cours après lui et aide Sadie à le plaquer en moins de 35 s.",
+            "Interroge Cleet, puis suis Sadie et Charles jusqu’au campement de Micah sur le mont Hagen. Galope sans quitter le chemin enneigé et élimine les guetteurs qui barrent le passage.",
+            "Quand un tireur touche Charles, repère le sniper en hauteur et élimine-le d’un headshot. C’est le tir le plus important pour la médaille.",
+            "Continue vers le sommet en utilisant les rochers comme couvert. Garde au moins 85 % de précision et ne consomme aucun objet de soin ; le chemin est long, mais il n’y a pas de chrono de fin.",
+            "Quand Sadie est blessée, laisse Charles l’aider et poursuis seul vers le camp. Élimine les hommes de Micah depuis les hauteurs avant d’entrer dans la cabane.",
+            "Dans la confrontation finale, reste à couvert et tire sur les lanternes pour forcer Micah à sortir. Quand Dutch intervient, laisse la scène se jouer puis termine l’affrontement.",
+            "La capture de Cleet, le headshot du sniper, la précision et l’absence d’objet de soin composent toute la médaille d’or de cette dernière mission."
+          ],["Aider Sadie à attraper Cleet en moins de 35 s","Faire un headshot au sniper qui touche Charles","Terminer avec au moins 85 % de précision","Ne pas utiliser d’objet de soin"]]
         ]]
       ]
     };
@@ -702,7 +1086,7 @@
         title:"Red Dead Redemption 2", category:"action-aventure",
         description:"Missions, activités, objets rares et secrets du Far West.",
         image:"screenshots/red-dead-redemption-2-01.jpg", imageAlt:"Capture de Red Dead Redemption 2",
-        updated:"Soluce complète", walkthrough:rdr2Walkthrough, guides:["Histoire : 8 chapitres, 110 missions","Missions d’honneur facultatives","Conseils & médailles d’or"],
+        updated:"Soluce complète", walkthrough:rdr2Walkthrough, guides:["Histoire : 6 chapitres + 2 parties d’épilogue","Missions d’honneur et contenu bonus","Étapes détaillées + objectifs de médaille d’or"],
         intro:"Toute l’histoire d’Arthur Morgan et John Marston, mission par mission, du chapitre 1 à l’épilogue. Attention : spoilers.",
         steps:["Choisis le chapitre ou la mission à consulter dans la table des matières de ta future soluce.","Suis les objectifs dans l’ordre et vérifie les captures d’écran aux passages importants.","Pense à indiquer les choix qui peuvent modifier la suite de l’histoire."]
       },
@@ -842,7 +1226,8 @@
         document.getElementById("modalContent").innerHTML =
           '<p>' + esc(game.intro) + '</p><h3>Avant de commencer</h3><ul>' + w.tips.map(t => "<li>" + esc(t) + "</li>").join("") + '</ul>' +
           w.chapters.map((c, i) => '<details class="wt-chapter"' + (i === 0 ? ' open' : '') + '><summary>' + esc(c[0]) + ' <small>' + c[2].length + ' missions</small></summary><p class="wt-intro">' + esc(c[1]) + '</p><ol class="wt-list">' +
-            c[2].map(m => '<li' + (m[2] ? ' class="wt-opt"' : '') + '><strong>' + esc(m[0]) + '</strong> ' + esc(m[1]) + (m[3] ? '<ol class="wt-steps">' + m[3].map(x => '<li>' + esc(x) + '</li>').join('') + '</ol>' : '') + (m[4] ? '<div class="wt-gold"><b>Médaille d’or :</b> ' + m[4].map(esc).join(' · ') + '</div>' : '') + '</li>').join("") + '</ol></details>').join("");
+            c[2].map(m => '<li' + (m[2] ? ' class="wt-opt"' : '') + '><strong>' + esc(m[0]) + '</strong> ' + esc(m[1]) + (m[3] ? '<ol class="wt-steps">' + m[3].map(x => '<li>' + esc(x) + '</li>').join('') + '</ol>' : '') + (m[4] ? '<div class="wt-gold"><b>Médaille d’or :</b> ' + m[4].map(esc).join(' · ') + '</div>' : '') + '</li>').join("") + '</ol></details>').join("") +
+          (w.sources ? '<h3>Guides consultés et recoupement</h3><ul class="wt-sources">' + w.sources.map(s => '<li><a href="' + esc(s[1]) + '" target="_blank" rel="noopener noreferrer">' + esc(s[0]) + '</a></li>').join("") + '</ul>' : "");
         document.getElementById("guideModal").classList.add("open");
         document.body.style.overflow = "hidden";
         document.getElementById("closeModal").focus();
@@ -874,5 +1259,5 @@
     renderGames();
     updateGames();
   </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a47c323d9d0fa9b8',t:'MTc5MTUzNjQzOQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
