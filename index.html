@@ -365,7 +365,7 @@
     // Soluce complète de Red Dead Redemption 2 (format : [nom, texte, optionnelle?])
     const rdr2Walkthrough = {
       tips:[
-        "Le chapitre 1 est détaillé pas à pas ; dans les chapitres suivants, chaque mission a déjà ses objectifs de médaille d’or, et les étapes détaillées sont ajoutées progressivement (chapitre 2 en cours : 5 missions sur 19 détaillées). Spoilers : cette soluce raconte le déroulement de l’histoire, du début à la fin.",
+        "Le chapitre 1 est détaillé pas à pas. Dans le chapitre 2, la soluce reprend à A Quiet Time et poursuit les missions dans l’ordre de la liste. Spoilers : cette soluce raconte le déroulement de l’histoire, du début à la fin.",
         "Les missions marquées ★ sont des missions d’honneur facultatives : elles se ratent si tu avances trop loin dans l’histoire, et il les faut toutes pour le succès « Lending a Hand ».",
         "Chaque mission peut être rejouée depuis Pause > Progression > Histoire. Pour la médaille d’or, tous les objectifs doivent être remplis dans une seule partie de la mission (70 médailles d’or débloquent « Gold Rush »).",
         "Ton niveau d’honneur influence la dernière scène d’Arthur : aide les inconnus, épargne les innocents et évite de piller les gens sans défense.",
@@ -424,19 +424,79 @@
           ["Exit Pursued by a Bruised Ego","Chasse à l’ours avec Hosea près de la Dakota. Utilise l’Œil de lynx pour suivre les traces et vise la tête.",0,["Hosea veut traquer un ours géant. Pendant le trajet, le jeu t’apprend à gérer les chevaux à l’écurie : déplace ta selle sur le cheval de Hosea pour t’en approprier un, puis file à Valentine.", "À l’écurie de Valentine, saute la scène, vends ou mets ton cheval en pension, achète le moins cher et sors vite du menu pour que Hosea continue.", "En chemin, Hosea te demande de chasser un lapin : un tir au fusil suffit, la qualité n’a aucune importance. Astuce de joueurs : tue-le dès que tu croises le groupe, avant qu’il ne se disperse.", "Monte le camp, suis le tutoriel de cuisine (cuisine et mange un plat) puis dors jusqu’au matin. Hosea te demande ensuite de fabriquer quelques appâts pour prédateurs, puis vous repartez à cheval.", "Arrivé sur place, active l’Œil de lynx et cherche la lueur dorée qui marque un indice. Examine-le pour révéler la piste de l’ours, puis court d’indice en indice (inutile d’être discret). Après le troisième, la piste se perd : utilise l’appât et cache-toi derrière des rochers.", "Quand Hosea va voir l’appât, reviens l’examiner pour déclencher la scène : l’ours attaque et tu passes automatiquement en Dead Eye. Compte bien tes tirs : il en faut au moins 6 qui touchent. Sinon, tu devras poursuivre l’ours pour compléter.", "Retourne voir Hosea après la fuite de l’ours, passe la scène et choisis « rester ici » pour terminer la mission. Pour les 12 minutes : passe toutes les scènes et utilise la vue cinématique quand c’est possible."],["Pister l’ours en 1 min 30", "Toucher l’ours au moins 6 fois", "Terminer en 12 minutes"]],
           ["The First Shall Be Last","Avec Trelawny, Javier et Charles, tu suis des chasseurs de primes pour libérer Sean. Combat en couverture.",0,["Retrouve Charles et Javier sur une colline qui domine Blackwater.", "Au bord de la rivière, attends que Javier soit en position avant d’éliminer les chasseurs de primes en silence.", "Pendant la fusillade, vise la tête : Charles et Javier tirent aussi, donc profites-en pour gonfler ton total de headshots.", "Tire sur la corde pour libérer Sean."],["Éliminer en silence les chasseurs de primes près de la rivière avec Javier", "Tirer sur la corde pour libérer Sean", "10 headshots", "N’utiliser aucun objet de soin"]],
           ["Paying a Social Call","Kieran vous guide vers Six Point Cabin où se cacherait Colm O’Driscoll. Fusillade en perspective.",0,["Après l’interrogatoire, Kieran indique Six Point Cabin. Il monte avec John ; John, Bill et toi le suivez à cheval jusqu’au camp, de l’autre côté de la colline.", "Reste accroupi et approche à couvert. Le premier O’Driscoll urine à l’écart : approche-le lentement par derrière. Contourne le camp par la gauche pour le suivant, assis seul sur une caisse. Utilise l’arc ou les couteaux de lancer, de préférence à la tête.", "Kieran tire au dernier moment et te sauve la vie. Colm n’est pas là, et Arthur s’énerve.", "Fouille la cabane : Kieran mentionne une cache d’argent dans la cheminée."],["Tuer 4 O’Driscoll en silence", "12 headshots", "Au moins 80 % de précision", "N’utiliser aucun objet de soin"]],
-          ["A Quiet Time","Tu emmènes Lenny boire un verre à Valentine pour le calmer. Séquence d’ivresse, puis retour au camp.",0,0,["Tenter de te réconcilier avec un ancien rival", "Prendre Lenny sur le fait", "Ne pas te faire arrêter"]],
-          ["Blessed are the Meek?","Évasion de Micah de la prison de Strawberry avant sa pendaison. Prévois une fuite à cheval.",0,0,["Pendant la fuite, abattre tous les agents à cheval en 55 secondes", "15 headshots", "Au moins 70 % de précision", "N’utiliser aucun objet de soin"]],
-          ["Good, Honest, Snake Oil","★ Capture le vendeur de remèdes recherché Benedict Allbright près de la Dakota.",1,0,["Empêcher Benedict Allbright de tomber de la falaise", "Le ligoter en 1 min 15", "Le remettre au shérif en 1 min 30"]],
-          ["We Loved Once and True (I-III)","★ Mary Linton te demande de convaincre Jamie, retrouvé dans l’ordre des Chéloniens, de revenir.",1,0,["Convaincre pacifiquement les Chéloniens de te laisser emmener Jamie", "Ramener Jamie à Mary en 2 minutes"]],
+          ["A Quiet Time","Tu emmènes Lenny boire un verre à Valentine pour le calmer. La soirée dégénère et tu dois le retrouver dans le saloon.",0,[
+            "Suis Lenny jusqu’à Valentine et entre avec lui dans le saloon. Pendant les premiers verres, repère Tommy près des escaliers et parle-lui plusieurs fois pour faire amende honorable après votre bagarre.",
+            "Quand Lenny disparaît, parcours le rez-de-chaussée et interpelle les clients que le jeu te désigne. Continue à monter et descendre les escaliers au fil des scènes : l’ivresse brouille les repères, mais les marqueurs indiquent où chercher.",
+            "Lorsqu’il est à l’étage, ouvre la porte de la chambre 1A pour le surprendre en pleine action : cela valide l’objectif correspondant.",
+            "La situation finit par attirer la loi. Fuis par la sortie arrière et, dans la ruelle, contourne le tonneau puis prends à droite. Garde tes distances avec les policiers jusqu’à ce que la poursuite cesse ; ne te laisse pas arrêter."
+          ],["Faire amende honorable auprès d’un ancien rival (parler à Tommy)","Surprendre Lenny en pleine action dans la chambre 1A","Ne pas te faire arrêter"]],
+          ["Blessed are the Meek?","Micah est enfermé à Strawberry. Tu le libères et dois ensuite survivre à une longue fusillade avant de fuir à cheval.",0,[
+            "Rends-toi au bureau du shérif de Strawberry et questionne-le sur son prisonnier. En ressortant, contourne le bâtiment pour parler à Micah depuis sa cellule.",
+            "Récupère le crochet du treuil à vapeur près de la fenêtre, fixe-le aux barreaux puis actionne le levier pour arracher la grille.",
+            "Protège Micah pendant la fuite à travers la ville. Mets-toi à couvert entre les salves, vise la tête et utilise le Sang-froid pour accumuler les 15 tirs précis sans gaspiller de munitions.",
+            "Micah fait un détour pour récupérer ses armes : suis-le, puis rejoins vos chevaux. Dès que la poursuite à cheval commence, concentre-toi sur les représentants de la loi montés et élimine-les vite ; il faut tous les abattre dans les 55 secondes.",
+            "Continue à suivre Micah jusqu’à ce qu’il s’arrête et te remercie avant de repartir. Pour la médaille, garde au moins 70 % de précision et n’utilise aucun objet de soin pendant toute la mission."
+          ],["Pendant la fuite, tuer tous les représentants de la loi à cheval en 55 secondes","15 tirs en pleine tête","Au moins 70 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["Good, Honest, Snake Oil","★ Le shérif de Valentine te confie une prime : retrouver Benedict Allbright et le ramener vivant.",1,[
+            "Prends l’affiche de recherche dans le bureau du shérif, puis suis la piste jusqu’au ravin où Allbright s’est réfugié.",
+            "Approche sans lui tirer dessus : il se jette dans la rivière et le courant l’emporte. Galope sur la berge en gardant sa position à l’œil ; ne le laisse pas dériver jusqu’à la chute.",
+            "Quand le courant ralentit et qu’il atteint une zone accessible, vise-le au lasso, descends de cheval et ligote-le avant qu’il ne puisse repartir.",
+            "Charge-le sur ta monture, remonte immédiatement et retourne au bureau du shérif de Valentine. Les deux chronos sont serrés : évite les détours et le combat inutile."
+          ],["Empêcher Benedict Allbright de tomber dans le ravin","Le ligoter en moins de 1 min 15","Le remettre au shérif en moins de 1 min 30"]],
+          ["We Loved Once and True (I-III)","★ Mary Linton t’écrit pour demander ton aide : son frère Jamie a rejoint l’ordre des Chéloniens.",1,[
+            "Lis la lettre de Mary dans ta tente, puis rends-lui visite près de Valentine. Accepte de retrouver Jamie pour lancer la suite de la mission.",
+            "Rejoins le rassemblement des Chéloniens sur la colline. Pour obtenir un départ pacifique, choisis les réponses conciliantes quand on t’interroge et ne sors pas ton arme.",
+            "Jamie prend la fuite à cheval. Poursuis-le sans le heurter ; quand le train vous sépare, prépare-toi au duel et suis les indications à l’écran pour le désarmer sans le tuer.",
+            "Après la scène, installe Jamie sur ton cheval et ramène-le rapidement à la gare de Valentine, où Mary attend. Pour l’or, le trajet de retour doit durer moins de deux minutes."
+          ],["Convaincre pacifiquement les Chéloniens de te laisser parler à Jamie","Ramener Jamie à Mary en moins de 2 minutes"]],
           ["Money Lending and Other Sins (I-II)","★ Strauss te charge de récupérer l’argent de plusieurs débiteurs.",1],
-          ["Money Lending and Other Sins (III)","Tu retrouves Thomas Downes, ruiné et malade : à toi de décider jusqu’où insister.",0,0,["Terminer en 2 min 10"]],
-          ["The Spines of America","Avec Hosea et Seamus, tu attaques une diligence à Carmody Dell pour convaincre le receleur d’Emerald Ranch.",0,0,["Piller tout Carmody Dell", "Ne pas te faire repérer", "Livrer le chariot à Emerald Ranch en 1 min 10"]],
-          ["Pouring Forth Oil (I-II)","★ Vole un wagon d’huile pour préparer le braquage de train de John.",1,0,["Livrer le chariot au point de dépôt en 1 min 45"]],
-          ["A Fisher of Men","Sortie pêche avec Jack : tu apprends les bases de la pêche.",0,0,["Attraper un poisson dans la minute 30 qui suit l’arrivée à la rivière", "Terminer en 7 min 20"]],
-          ["Pouring Forth Oil (III-IV)","Le wagon bloque la voie : tu braques le train, les passagers et le wagon à bagages.",0,0,["Tuer tous les gardes du train avant que Sean tire", "Vider le wagon à bagages", "Échapper à la loi en 1 min 30", "10 kills en Dead Eye", "N’utiliser aucun objet de soin"]],
-          ["An American Pastoral Scene","Avec Micah, tu attaques une diligence qui transporte l’argent d’une banque.",0,0,["Headshot chaque garde à cheval qui protège le chariot", "10 kills en Dead Eye", "Terminer en 6 minutes", "N’utiliser aucun objet de soin"]],
-          ["The Sheep and the Goats","Vol d’un troupeau de moutons à vendre aux enchères à Valentine. Garde le troupeau groupé.",0,0,["Rentrer tous les moutons dans l’enclos de Valentine", "25 headshots", "Au moins 70 % de précision", "N’utiliser aucun objet de soin"]],
-          ["A Strange Kindness","Avec Charles, tu repères un nouveau campement à Dewbury Creek. Fin du chapitre.",0,0,["Ramener le captif à sa famille en 1 min 40", "5 headshots", "Au moins 80 % de précision", "N’utiliser aucun objet de soin"]]
+          ["Money Lending and Other Sins (III)","Tu vas réclamer sa dette à Thomas Downes, que tu retrouves en train de travailler dans son champ.",0,[
+            "Rejoins la ferme des Downes et parle à Thomas dans le champ. Il n’a pas l’argent et te supplie de laisser sa famille tranquille.",
+            "La confrontation se déroule malgré ses protestations. Suis les actions indiquées à l’écran, puis quitte la propriété quand la scène s’achève.",
+            "Retourne au camp et fais ton rapport à Strauss pour conclure cette étape. La médaille d’or impose une durée totale de 2 min 10 : pars sans détour et passe les scènes quand le jeu le permet."
+          ],["Terminer en moins de 2 min 10"]],
+          ["The Spines of America","Avec Hosea et Seamus, tu cambrioles la ferme de Carmody Dell afin de prouver ta valeur au receleur d’Emerald Ranch.",0,[
+            "Retrouve Hosea près de la grange, puis partez en reconnaissance vers Carmody Dell. Choisis l’approche de nuit pour éviter d’avoir à créer une diversion.",
+            "Entre discrètement dans la maison et fouille chaque pièce, les tiroirs et les contenants. Pense à récupérer l’argent caché dans la cheminée : le défi demande de tout piller.",
+            "Ne te fais pas voir par les habitants. Referme derrière toi ce que tu as ouvert et rejoins Hosea dès que la fouille est terminée.",
+            "Pars avec la diligence et conduis directement jusqu’à Emerald Ranch. Le trajet final doit prendre moins de 1 min 10 ; évite les détours et garde les chevaux au galop sans heurter d’obstacle."
+          ],["Piller tous les objets de valeur à Carmody Dell","Ne pas te faire repérer","Livrer la diligence à Emerald Ranch en moins de 1 min 10"]],
+          ["Pouring Forth Oil (I-II)","★ John prépare un braquage de train et te demande de voler le wagon-citerne qui servira à bloquer la voie.",1,[
+            "Retrouve John au camp : il t’indique la raffinerie où se trouve le wagon de pétrole. Rends-toi sur place et observe les gardes avant d’approcher.",
+            "Profite d’un moment où le wagon est accessible pour grimper à bord et prendre les rênes. Si des hommes te poursuivent, éloigne-les sans t’arrêter pour te battre.",
+            "Conduis jusqu’au point de dépôt indiqué, puis retourne au camp prévenir John. Le chrono d’or est de 1 min 45 pour atteindre la destination : choisis la route la plus directe et accélère dès que tu as le contrôle."
+          ],["Livrer le wagon au point de dépôt en moins de 1 min 45"]],
+          ["A Fisher of Men","Abigail te confie Jack pour une sortie au bord de la rivière ; la pêche est bientôt interrompue par deux agents Pinkerton.",0,[
+            "Va voir Abigail au camp, puis accompagne Jack jusqu’à la rivière. Suis le tutoriel : équipe l’appât, lance la ligne et ramène-la par petites tractions quand le poisson mord.",
+            "Attrape un poisson dans les 1 min 30 suivant votre arrivée au bord de l’eau. Ne multiplie pas les lancers : vise une zone où tu vois des remous et garde la ligne tendue sans la casser.",
+            "Deux détectives Pinkerton viennent parler de Dutch. Laisse la conversation suivre son cours, puis remonte à cheval avec Jack.",
+            "Retourne directement au camp pour terminer en moins de 7 min 20 au total."
+          ],["Attraper un poisson dans les 1 min 30 après l’arrivée à la rivière","Terminer en moins de 7 min 20"]],
+          ["Pouring Forth Oil (III-IV)","Avec John, Sean et Charles, tu bloques un train avec le wagon-citerne et attaques les voyageurs pour financer le gang.",0,[
+            "Rejoins John près de la voie et positionne le wagon d’huile sur les rails. Une fois le train arrêté, monte à bord avec le groupe.",
+            "Élimine les gardes immédiatement, avant que Sean ne déclenche le signal de départ de la fusillade. Utilise le Sang-froid pour accumuler dix éliminations et conserve une bonne réserve de santé sans consommer de soin.",
+            "Passe de wagon en wagon en intimidant les passagers et en fouillant les compartiments. Dans le wagon à bagages, ouvre les coffres et prends tout le butin avant de rejoindre les autres.",
+            "Quand la loi arrive, protège la fuite du groupe, puis éloigne-toi des poursuivants et de leur zone de recherche. Il faut les semer en moins de 1 min 30."
+          ],["Tuer tous les gardes du train avant que Sean ne tire","Piller entièrement le wagon à bagages","Échapper à la loi en moins de 1 min 30","Tuer 10 ennemis en Sang-froid","Ne pas utiliser d’objet de soin"]],
+          ["An American Pastoral Scene","Micah a repéré une diligence chargée d’argent. Tu l’aides à la poursuivre et à prendre son contenu.",0,[
+            "Retrouve Micah à son campement, puis suis-le jusqu’au point où la diligence doit passer.",
+            "À cheval, vise la tête de chacun des gardes montés qui escortent la voiture. Continue à suivre la diligence et profite du Sang-froid pour atteindre dix éliminations au total.",
+            "Prends le contrôle de la diligence et conduis jusqu’au passage de rivière. Les O’Driscoll tendent une embuscade : utilise les couverts et élimine-les sans consommer de soin.",
+            "Quand la zone est dégagée, ouvre le coffre arrière et récupère l’argent. Pour l’or, termine l’ensemble en moins de six minutes."
+          ],["Tuer d’un tir en pleine tête tous les gardes montés qui escortent la diligence","Tuer 10 ennemis en Sang-froid","Terminer en moins de 6 minutes","Ne pas utiliser d’objet de soin"]],
+          ["The Sheep and the Goats","John t’entraîne dans un vol de moutons : il faut disperser les ranchers, rassembler le troupeau et le conduire à Valentine.",0,[
+            "Retrouve John au parc à bestiaux de Valentine et suis-le à l’armurerie pour récupérer le fusil Rolling Block. Rejoins ensuite les collines où paissent les moutons.",
+            "Utilise la lunette pour tirer près des ranchers et les faire fuir ; ne les touche pas. Dès que le troupeau se disperse, contourne-le et pousse les moutons vers John jusqu’à ce qu’ils soient regroupés.",
+            "Conduis tout le troupeau vers Valentine en restant près des animaux pour les garder ensemble. Fais-les entrer dans l’enclos avant de rejoindre John.",
+            "L’échange dégénère en fusillade. Mets-toi à couvert et vise calmement : les 25 tirs à la tête et les 70 % de précision sont les objectifs les plus exigeants. Ne prends aucun objet de soin."
+          ],["Faire entrer tous les moutons dans l’enclos de Valentine","25 tirs en pleine tête","Au moins 70 % de précision","Ne pas utiliser d’objet de soin"]],
+          ["A Strange Kindness","Avec Charles, tu pars reconnaître Dewberry Creek et découvres une famille allemande attaquée ; leur père a été enlevé.",0,[
+            "Suis Charles vers le nouvel emplacement possible du camp. En chemin, arrête-toi auprès de la femme et des enfants et comprends ce qui leur est arrivé.",
+            "Repère les traces des ravisseurs avec l’Œil de lynx, puis suis-les à travers le terrain jusqu’à leur camp. Reste avec Charles et prépare-toi à une embuscade.",
+            "Élimine les bandits en privilégiant les tirs à la tête : il en faut cinq et la précision doit rester au-dessus de 80 %. N’utilise aucun objet de soin.",
+            "Libère le père de famille et installe-le sur ton cheval. Repars immédiatement vers les siens : tu as 1 min 40 pour le leur ramener.",
+            "Après les retrouvailles, suis Charles jusqu’au lieu choisi pour le camp. Le gang s’y installe et le chapitre se termine."
+          ],["Ramener le prisonnier à sa famille en moins de 1 min 40","5 tirs en pleine tête","Au moins 80 % de précision","Ne pas utiliser d’objet de soin"]]
         ]],
         ["Chapitre 3 — Clemens Point","Nouveau camp près de Rhodes, au milieu d’une guerre entre deux familles.",[
           ["The New South","Pêche avec Dutch et Hosea, puis installation à Clemens Point.",0,0,["Assommer Anders Anderson sans prendre un coup", "Le rattraper et le ramener en prison en 5 min 30", "Attraper un poisson avec Dutch et Hosea"]],
